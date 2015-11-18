@@ -1,5 +1,5 @@
 ;; 引用元
-;; http://www.namazu.org/~tsuchiya/elisp/#shell-command-with-completion
+;; http://www.namazu.org/~tsuchiya/elisp/shell-command.el
 
 ;;; shell-command.el --- enables tab-completion for `shell-command'
 
