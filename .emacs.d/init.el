@@ -17,10 +17,7 @@
 
 ;; C-c c でcompileコマンドを呼び出す
 (define-key mode-specific-map "c" 'compile)
-;; C-c z でshell-commandを呼び出す
-(define-key glocal-map (kdd "C-c z") 'shell-command)
+;; C-c s でshell-commandを呼び出す
+(define-key global-map (kbd "C-c s") 'shell-command)
 ;; C-c C-z でshellコマンドを呼び出す
-(define-key global-map (kdd "C-c C-z") 'shell)
-;; Thanks to "http://www.namazu.org/~tsuchiya/elisp/#shell-command-with-completion"
-(load-file "~/.emacs.d/shell-command.el")
-(shell-command-completion-mode)
+(define-key global-map (kbd "C-c C-s") 'shell)
