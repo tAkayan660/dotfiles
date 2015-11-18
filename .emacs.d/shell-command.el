@@ -1,3 +1,6 @@
+;; 引用元
+;; http://www.namazu.org/~tsuchiya/elisp/#shell-command-with-completion
+
 ;;; shell-command.el --- enables tab-completion for `shell-command'
 
 ;; Copyright (C) 1998-2007 TSUCHIYA Masatoshi <tsuchiya@namazu.org>
