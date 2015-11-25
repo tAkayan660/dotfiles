@@ -48,3 +48,12 @@
 (display-time-mode t)
 ;; バッリー残量を表示
 (display-battery-mode t)
+
+;; auto-completeの設定
+;; 引用先
+;; https://github.com/auto-complete/auto-complete.git
+;; https://github.com/auto-complete/popup-el.git
+(when (require 'auto-complete-config nil t)
+  (add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/ac-dict")
+  (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
+  (ac-config-default))
