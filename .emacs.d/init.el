@@ -38,7 +38,7 @@
 ;; カラム番号も表示（行数）（モードライン）
 (column-number-mode t)
 ;; 行数番号を常に表示
-(global-linum-mode t)
+;; (global-linum-mode t)
 ;; ファイルサイズを表示
 (size-indication-mode t)
 ;; 時計を表示（好みに応じてフォーマットを変更可能）
