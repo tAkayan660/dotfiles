@@ -119,3 +119,17 @@
   (add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/ac-dict")
   (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
   (ac-config-default))
+
+;; color-moccurの設定
+(when (require 'color-moccur nil t)
+  ;; M-o に occur-by-moccur を割り当てる。
+  (define-key global-map (kbd "M-o") 'occur-by-moccur)
+  ;; スペース区切りでAND検索
+  (setq moccur-split-word t)
+  ;; ディレクトリ検索のとき除外するファイル
+  (add-to-list 'dmoccur-exclusion-mask "\\.DS_Store")
+  (add-to-list 'dmoccur-exclusion-mask "^#.+#$")
+  ;; Migemoを利用できる環境であればMigemoを使う
+  (when (and (executable-find "cmigemo")
+	     (require 'migemo nil t))
+    (setq moccur-use-migemo t)))
