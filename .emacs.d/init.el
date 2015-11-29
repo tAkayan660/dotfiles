@@ -133,3 +133,6 @@
   (when (and (executable-find "cmigemo")
 	     (require 'migemo nil t))
     (setq moccur-use-migemo t)))
+
+;; moccur-edit の設定
+(require 'moccur-edit nil t)
