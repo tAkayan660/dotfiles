@@ -47,7 +47,7 @@
 ;; (setq display-time-24hr-format t) ; 24時間表示
 (display-time-mode t)
 ;; バッリー残量を表示
-(display-battery-mode t)
+;; (display-battery-mode t)
 
 ;; auto-installの設定
 (when (require 'auto-install nil t)
@@ -136,3 +136,17 @@
 
 ;; moccur-edit の設定
 (require 'moccur-edit nil t)
+
+;; undohistの設定
+(when (require 'undohist nil t)
+  (undohist-initialize))
+
+;; undo-treeの設定
+(when (require 'undo-tree nil t)
+  (global-undo-tree-mode))
+
+;; point-undoの設定
+(when (require 'point-undo nil t)
+  (define-key global-map (kbd "M-[") 'point-undo)
+  (define-key global-map (kbd "M-]") 'point-redo)
+)
