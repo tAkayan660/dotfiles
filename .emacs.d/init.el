@@ -150,3 +150,16 @@
   (define-key global-map (kbd "M-[") 'point-undo)
   (define-key global-map (kbd "M-]") 'point-redo)
 )
+
+;; ElScreenの設定
+;; プレフィックスキーを変更する（初期値はC-z）
+;; (setq  elscreen-prefix-key "C-w")
+
+;; (when (require 'elscreen nil t)
+  ;; C-z とタイプした場合にデフォルトのC-zを利用する
+;;  (if window-system
+;;      (define-key elscreen-map (kbd "C-z") 'iconify-or-deiconify-frame)
+;;    (define-key elscreen-map (kbd "C-z") 'suspend-emacs)))
+
+
+
