@@ -37,6 +37,8 @@
 ;; フレーム
 ;; カラム番号も表示（行数）（モードライン）
 (column-number-mode t)
+;; タイトルバーにファイルのフルパスを表示
+(setq frame-title-format "%f")
 ;; 行数番号を常に表示
 ;; (global-linum-mode t)
 ;; ファイルサイズを表示
