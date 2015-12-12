@@ -37,10 +37,17 @@
 ;; フレーム
 ;; カラム番号も表示（行数）（モードライン）
 (column-number-mode t)
-;; タイトルバーにファイルのフルパスを表示
-(setq frame-title-format "%f")
+;; タイトルバーにファイルのフルパス表示
+(setq frame-title-format
+      (format "%%f - Emacs@%s" (system-name)))
 ;; 行数番号を常に表示
 ;; (global-linum-mode t)
+;; 行番号表示
+(global-linum-mode t)
+(setq linum-format "%4d ")
+(set-face-attribute 'linum nil
+		    :foreground "#FFFF00"
+		    :height 0.9)
 ;; ファイルサイズを表示
 (size-indication-mode t)
 ;; 時計を表示（好みに応じてフォーマットを変更可能）
