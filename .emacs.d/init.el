@@ -58,6 +58,11 @@
 ;; バッリー残量を表示
 ;; (display-battery-mode t)
 
+;; package.elの設定
+(package-initialize)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
 ;; auto-installの設定
 (when (require 'auto-install nil t)
   ;; インストールディレクトリを設定する　初期値は ~/.emacs.d/auto-install/
@@ -160,15 +165,9 @@
   (define-key global-map (kbd "M-]") 'point-redo)
 )
 
-;; ElScreenの設定
-;; プレフィックスキーを変更する（初期値はC-z）
-;; (setq  elscreen-prefix-key "C-w")
-
-;; (when (require 'elscreen nil t)
-  ;; C-z とタイプした場合にデフォルトのC-zを利用する
-;;  (if window-system
-;;      (define-key elscreen-map (kbd "C-z") 'iconify-or-deiconify-frame)
-;;    (define-key elscreen-map (kbd "C-z") 'suspend-emacs)))
-
-
-
+;;; ElScreenの設定
+(require 'elscreen)
+(elscreen-set-prefix-key (kbd "C-t"))
+(elscreen-start)
+;; タブの先頭に[X]を表示しない
+(setq elscreen-tab-display-kill-screen nil)
