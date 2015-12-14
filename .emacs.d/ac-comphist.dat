@@ -1,150 +1,150 @@
-((("anything-etags" .
-   [0 0 0 0 0 0 0 0 0 0 0 2 0 0])
-  ("default" .
-   [0 0 0 0 1 0 0])
-  ("switch" .
-   [0 0 1 0 0 0])
-  ("break" .
-   [0 0 0 2 0])
-  ("emacs" .
-   [1 0 0 0 0])
-  ("alias" .
-   [0 0 0 1 0])
-  ("defcustom" .
-   [0 0 0 0 0 1 0 0 0])
-  ("suspend-emacs" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("C-z" .
-   [0 0 1])
-  ("iconify-or-deiconify-frame" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("window-system" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("window" .
-   [0 0 0 1 0 0])
-  ("if" .
-   [1 0])
-  ("to" .
-   [1 0])
-  ("elsreen" .
-   [0 0 0 1 0 0 2])
-  ("ElScreen" .
-   [0 0 2 0 0 0 0 0])
-  ("undohist-initialize" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("undohist" .
-   [0 0 0 0 0 1 2 0])
-  ("undo" .
-   [1 0 1 0])
-  ("anything-c-moccur" .
-   [0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 0 0])
-  ("descbinds-anything" .
-   [0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("anything-auto-install" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("anything-show-completion" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("anything-complete" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("anything-migemo" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("executable-find" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
-  ("executables" .
-   [0 0 0 0 0 0 0 1 0 0 1])
-  ("and" .
-   [2 0 0])
-  ("anything-match-plugin" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("anything-config" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("alpha" .
-   [0 0 0 1 0])
-  ("anything-enable-shortcuts" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("anything-quick-update" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("anything-candidate-number-limit" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("anything-candidate-number" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("naything" .
-   [0 0 0 1 0 0 0 0])
-  ("anything-idle-delay" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("setq" .
-   [1 0 1 4])
-  ("anything" .
-   [0 0 12 9 0 0 0 1])
-  ("set-marker" .
-   [0 0 0 0 0 1 0 0 0 0])
-  ("nil" .
-   [17 0 0])
-  ("auto-install" .
-   [2 0 0 0 0 0 0 1 0 0 0 2])
-  ("auto-insert" .
-   [0 0 0 0 0 0 0 2 0 0 0])
-  ("require" .
-   [0 0 13 3 1 0 2])
-  ("when" .
-   [8 0 1 4])
-  ("person" .
-   [1 0 1 0 0 1])
-  ("include" .
-   [0 0 1 1 0 0 0])
-  ("student" .
-   [1 0 0 9 0 0 0])
-  ("name" .
-   [3 0 1 0])
-  ("phone" .
-   [0 0 3 0 0])
-  ("global-set-key" .
-   [0 0 0 1 0 0 1 0 0 0 0 0 0 1])
-  ("kbd" .
-   [6 0 0])
-  ("redo" .
-   [1 0 0 0])
-  ("color-moccur" .
-   [0 0 0 0 1 0 0 0 0 0 0 0])
-  ("occur-by-moccur" .
-   [0 0 0 1 0 0 0 0 1 0 0 0 0 0 0])
-  ("を割り当てる。" .
-   [0 0 0 0 0 1 0])
-  ("define-key" .
-   [0 0 0 1 1 0 0 0 0 1])
-  ("global-map" .
-   [0 0 0 0 0 0 0 0 0 1])
-  ("M-o" .
-   [1 0 0])
-  ("moccur-split-word" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("add-to-list" .
-   [0 0 0 0 0 0 1 1 0 0 0])
-  ("dmoccur" .
-   [0 0 1 1 0 0 0])
-  ("dmoccur-exclusion-mask" .
-   [0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("cmigemo" .
-   [0 0 0 0 1 0 0])
-  ("migemo" .
-   [0 0 0 1 0 0])
-  ("moccur-use-migemo" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("wgrep" .
-   [0 0 1 0 0])
-  ("printf" .
-   [9 0 0 0 1 0])
-  ("scanf" .
-   [3 0 0 3 2])
-  ("case" .
-   [0 0 1 0])
-  ("address" .
-   [0 0 1 1 0 0 0])
-  ("while" .
-   [0 0 0 3 0])
-  ("close" .
-   [2 1 0 0 1])
+((("fprintf" .
+   [1 0 0 0 0 0 0])
   ("exit" .
    [1 0 0 0])
-  ("fprintf" .
-   [1 0 0 0 0 0 0])))
+  ("close" .
+   [2 1 0 0 1])
+  ("while" .
+   [0 0 0 3 0])
+  ("address" .
+   [0 0 1 1 0 0 0])
+  ("case" .
+   [0 0 1 0])
+  ("scanf" .
+   [3 0 0 3 2])
+  ("printf" .
+   [9 0 0 0 1 0])
+  ("wgrep" .
+   [0 0 1 0 0])
+  ("moccur-use-migemo" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("migemo" .
+   [0 0 0 1 0 0])
+  ("cmigemo" .
+   [0 0 0 0 1 0 0])
+  ("dmoccur-exclusion-mask" .
+   [0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("dmoccur" .
+   [0 0 1 1 0 0 0])
+  ("add-to-list" .
+   [0 0 0 0 0 0 1 1 0 0 0])
+  ("moccur-split-word" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("M-o" .
+   [1 0 0])
+  ("global-map" .
+   [0 0 0 0 0 0 0 0 0 1])
+  ("define-key" .
+   [0 0 0 1 1 0 0 0 0 1])
+  ("を割り当てる。" .
+   [0 0 0 0 0 1 0])
+  ("occur-by-moccur" .
+   [0 0 0 1 0 0 0 0 1 0 0 0 0 0 0])
+  ("color-moccur" .
+   [0 0 0 0 1 0 0 0 0 0 0 0])
+  ("redo" .
+   [1 0 0 0])
+  ("kbd" .
+   [6 0 0])
+  ("global-set-key" .
+   [0 0 0 1 0 0 1 0 0 0 0 0 0 1])
+  ("phone" .
+   [0 0 3 0 0])
+  ("name" .
+   [3 0 1 0])
+  ("student" .
+   [1 0 0 9 0 0 0])
+  ("include" .
+   [0 0 1 1 0 0 0])
+  ("person" .
+   [1 0 1 0 0 1])
+  ("when" .
+   [8 0 1 4])
+  ("require" .
+   [0 0 13 3 1 0 2])
+  ("auto-insert" .
+   [0 0 0 0 0 0 0 2 0 0 0])
+  ("auto-install" .
+   [2 0 0 0 0 0 0 1 0 0 0 2])
+  ("nil" .
+   [17 0 0])
+  ("set-marker" .
+   [0 0 0 0 0 1 0 0 0 0])
+  ("anything" .
+   [0 0 12 9 0 0 0 1])
+  ("setq" .
+   [1 0 1 4])
+  ("anything-idle-delay" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("naything" .
+   [0 0 0 1 0 0 0 0])
+  ("anything-candidate-number" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("anything-candidate-number-limit" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("anything-quick-update" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("anything-enable-shortcuts" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("alpha" .
+   [0 0 0 1 0])
+  ("anything-config" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("anything-match-plugin" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("and" .
+   [2 0 0])
+  ("executables" .
+   [0 0 0 0 0 0 0 1 0 0 1])
+  ("executable-find" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("anything-migemo" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("anything-complete" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("anything-show-completion" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("anything-auto-install" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("descbinds-anything" .
+   [0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("anything-c-moccur" .
+   [0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 0 0])
+  ("undo" .
+   [1 0 1 0])
+  ("undohist" .
+   [0 0 0 0 0 1 2 0])
+  ("undohist-initialize" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("ElScreen" .
+   [0 0 2 0 0 0 0 0])
+  ("elsreen" .
+   [0 0 0 1 0 0 2])
+  ("to" .
+   [1 0])
+  ("if" .
+   [1 0])
+  ("window" .
+   [0 0 0 1 0 0])
+  ("window-system" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("iconify-or-deiconify-frame" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("C-z" .
+   [0 0 1])
+  ("suspend-emacs" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("defcustom" .
+   [0 0 0 0 0 1 0 0 0])
+  ("alias" .
+   [0 0 0 1 0])
+  ("emacs" .
+   [1 0 0 0 0])
+  ("break" .
+   [0 0 0 2 0])
+  ("switch" .
+   [0 0 1 0 0 0])
+  ("default" .
+   [0 0 0 0 1 0 0])
+  ("anything-etags" .
+   [0 0 0 0 0 0 0 0 0 0 0 2 0 0])))

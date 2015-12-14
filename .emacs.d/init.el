@@ -41,10 +41,8 @@
 ;; カラム番号も表示（行数）（モードライン）
 (column-number-mode t)
 ;; タイトルバーにファイルのフルパス表示
-(setq frame-title-format
-      (if (buffer-file-name)
-	  (format "%%f - Emacs")
-	(format "%%b - Emacs")))
+(set-default 'mode-line-buffer-identification
+	     '(buffer-file-name ("%f") ("%b")))
 ;; 行番号表示
 (global-linum-mode t)
 (setq linum-format "%4d ")
