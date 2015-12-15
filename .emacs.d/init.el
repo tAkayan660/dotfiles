@@ -40,12 +40,12 @@
 ;; フレーム
 ;; カラム番号も表示（行数）（モードライン）
 (column-number-mode t)
-;; タイトルバーにファイルのフルパス表示
+;; モードラインにファイルのフルパス表示
 (set-default 'mode-line-buffer-identification
-	     '(buffer-file-name ("%f") ("%b")))
+	      '(buffer-file-name ("%f") ("%b")))
 ;; 行番号表示
 (global-linum-mode t)
-(setq linum-format "%4d ")
+(setq linum-format "%4d |")
 (set-face-attribute 'linum nil
 		    :foreground "#FFFF00"
 		    :height 0.9)
@@ -168,10 +168,15 @@
 
 ;;; ElScreenの設定
 (require 'elscreen)
-(elscreen-set-prefix-key (kbd "C-t"))
+(elscreen-set-prefix-key (kbd "M-t"))
+(global-set-key "\M-T" 'elscreen-clone)
+(global-set-key "\M-}" 'elscreen-next)
+(global-set-key "\M-{" 'elscreen-previous)
 (elscreen-start)
 ;; タブの先頭に[X]を表示しない
 (setq elscreen-tab-display-kill-screen nil)
+;;; header-lineの先頭に[<->]を表示しない
+(setq elscreen-tab-display-control nil)
 
 ;; Flymake の設定
 ;; 参考
