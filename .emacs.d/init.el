@@ -45,7 +45,7 @@
 	      '(buffer-file-name ("%f") ("%b")))
 ;; 行番号表示
 (global-linum-mode t)
-(setq linum-format "%4d |")
+(setq linum-format "%4d | ")
 (set-face-attribute 'linum nil
 		    :foreground "#FFFF00"
 		    :height 0.9)
@@ -167,16 +167,84 @@
 )
 
 ;;; ElScreenの設定
-(require 'elscreen)
-(elscreen-set-prefix-key (kbd "M-t"))
-(global-set-key "\M-T" 'elscreen-clone)
-(global-set-key "\M-}" 'elscreen-next)
-(global-set-key "\M-{" 'elscreen-previous)
-(elscreen-start)
+;; (require 'elscreen)
+;; (elscreen-set-prefix-key (kbd "C-t"))
+;; (global-set-key (kbd "C-M-n") 'elscreen-clone)
+;; (global-set-key (kbd "C-M-]") 'elscreen-next)
+;; (global-set-key (kbd "C-M-[") 'elscreen-previous)
+;; (elscreen-start)
 ;; タブの先頭に[X]を表示しない
-(setq elscreen-tab-display-kill-screen nil)
+;; (setq elscreen-tab-display-kill-screen nil)
 ;;; header-lineの先頭に[<->]を表示しない
-(setq elscreen-tab-display-control nil)
+;; (setq elscreen-tab-display-control nil)
+
+;;
+;; tabber-mode
+;;
+;; 引用元
+;; http://blog.iss.ms/2014/03/01/202435
+(require 'tabbar)
+(tabbar-mode 1)
+;;
+;; ref: http://d.hatena.ne.jp/plasticster/20110825/1314271209
+;; タブ上でマウスホイール操作無効
+(tabbar-mwheel-mode -1)
+;; グループ化しない
+(setq tabbar-buffer-groups-function nil)
+;; 左に表示されるボタンを無効化
+(dolist (btn '(tabbar-buffer-home-button
+	       tabbar-scroll-left-button
+	       tabbar-scroll-right-button))
+  (set btn (cons (cons "" nil)
+		 (cons "" nil))))
+;; タブに表示させるバッファの設定
+(defvar my-tabbar-displayed-buffers
+  '("*scratch*" "*Messages*" "*Backtrace*" "*Colors*" "*Faces*" "*vc-")
+  "*Regexps matches buffer names always included tabs.")
+(defun my-tabbar-buffer-list ()
+  "Return the list of buffers to show in tabs.
+Exclude buffers whose name starts with a space or an asterisk.
+The current buffer and buffers matches `my-tabbar-displayed-buffers'
+are always included."
+  (let* ((hides (list ?\  ?\*))
+	 (re (regexp-opt my-tabbar-displayed-buffers))
+	 (cur-buf (current-buffer))
+	 (tabs (delq nil
+		     (mapcar (lambda (buf)
+			       (let ((name (buffer-name buf)))
+				 (when (or (string-match re name)
+					   (not (memq (aref name 0) hides)))
+				   buf)))
+			     (buffer-list)))))
+    ;; Always include the current buffer.
+    (if (memq cur-buf tabs)
+	tabs
+      (cons cur-buf tabs))))
+
+(setq tabbar-buffer-list-function 'my-tabbar-buffer-list)
+;; appearances
+(setq tabbar-separator '(1.0)) ;; タブセパレータの長さ
+(set-face-attribute 'tabbar-default nil
+		    :family "Ricty"
+		    :foreground "#e5e5e5"
+		    :background "#000000"
+		    :height 1.0)
+(set-face-attribute 'tabbar-unselected nil
+		    :foreground "#000000"
+		    :background "#e5e5e5"
+		    :box nil)
+(set-face-attribute 'tabbar-selected nil
+		    :foreground "#e5e5e5"
+		    :background "#00cd00"
+		    :box nil)
+(set-face-attribute 'tabbar-button nil
+		    :box nil)
+;; key bindings
+(global-set-key [(C-tab)]   'tabbar-forward-tab)
+(global-set-key [(C-S-tab)] 'tabbar-backward-tab)
+(global-set-key "\M-]"      'tabbar-forward-tab)
+(global-set-key "\M-["      'tabbar-backward-tab)
+
 
 ;; Flymake の設定
 ;; 参考
@@ -247,4 +315,11 @@
 	    (lambda () (flymake-mode t)))
   )
 
+
+;;
+;; emacs-nav
+;;
+(require 'nav)
+(setq nav-split-window-direction 'vertical) ;; 分割したフレームを垂直に並べる
+(global-set-key "\C-x\C-d" 'nav-toggle)     ;; C-x C-d で nav をトグル
 
