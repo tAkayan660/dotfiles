@@ -112,4 +112,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-alias emacs="emacs -nw"
+alias semacs="\emacs --daemon"
+alias emacs="emacsclient -nw"
+alias kemacs='emacsclient -e "(kill-emacs)"'
