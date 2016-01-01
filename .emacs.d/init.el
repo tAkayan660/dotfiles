@@ -46,7 +46,7 @@
 	      '(buffer-file-name ("%f") ("%b")))
 ;; 行番号表示
 (global-linum-mode t)
-(setq linum-format "%4d ")
+(setq linum-format "%d ")
 (set-face-attribute 'linum nil
 		    :foreground "#FFFF00"
 		    :height 0.9)
