@@ -1,8 +1,6 @@
 ## dotfiles
 =======
-# Emacs
- * **init.el適用方法**<br>
- 　  端末で次のように,シンボリックリンクを作成する.<br>
-	`ln -s /home/ユーザー名/dotfiles/.emacs.d ~/`
+# install方法
+dotfilesを保存したいデレクトリまで行き，端末で次のように,コマンドを入力する.<br>
+`curl https://raw.githubusercontent.com/tAkayan660/dotfiles/master/install.sh | bash`
 
-※ただいま作成中
