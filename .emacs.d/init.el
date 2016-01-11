@@ -324,3 +324,13 @@ are always included."
 (setq nav-split-window-direction 'vertical) ;; 分割したフレームを垂直に並べる
 (global-set-key "\C-x\C-d" 'nav-toggle)     ;; C-x C-d で nav をトグル
 
+;;
+;; backup の保存先
+;;
+(setq backup-directory-alist
+        (cons (cons ".*" (expand-file-name "~/backup/emacs/"))
+	              backup-directory-alist))
+
+
+(setq auto-save-file-name-transforms
+        `((".*", (expand-file-name "~/backup/emacs/") t)))
