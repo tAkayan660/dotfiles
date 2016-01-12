@@ -331,6 +331,7 @@ are always included."
         (cons (cons ".*" (expand-file-name "~/backup/emacs/"))
 	              backup-directory-alist))
 
-
 (setq auto-save-file-name-transforms
         `((".*", (expand-file-name "~/backup/emacs/") t)))
+
+(setq auto-save-list-file-prefix "~/backup/emacs/")
