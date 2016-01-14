@@ -38,27 +38,12 @@
 ;; "C-t"でウィンドウを切り替える。初期値は transpose-chars
 (global-set-key (kbd "C-t") 'other-window)
 
-;; フレーム
-;; カラム番号も表示（行数）（モードライン）
-(column-number-mode t)
-;; モードラインにファイルのフルパス表示
-(set-default 'mode-line-buffer-identification
-	      '(buffer-file-name ("%f") ("%b")))
 ;; 行番号表示
 (global-linum-mode t)
 (setq linum-format "%d ")
 (set-face-attribute 'linum nil
 		    :foreground "#FFFF00"
 		    :height 0.9)
-;; ファイルサイズを表示
-(size-indication-mode t)
-;; 時計を表示（好みに応じてフォーマットを変更可能）
-;; (setq display-time-day-and-date t) ;　曜日・月・日を表示
-;; (display-time-mode t) ; 元
-;; (setq display-time-24hr-format t) ; 24時間表示
-(display-time-mode t)
-;; バッリー残量を表示
-;; (display-battery-mode t)
 
 ;; package.elの設定
 (package-initialize)
