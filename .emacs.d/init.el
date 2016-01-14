@@ -66,15 +66,15 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 ;; auto-installの設定
-(when (require 'auto-install nil t)
+;; (when (require 'auto-install nil t)
   ;; インストールディレクトリを設定する　初期値は ~/.emacs.d/auto-install/
-  (setq auto-install-directory "~/.emacs.d/elisp/")
+;;  (setq auto-install-directory "~/.emacs.d/elisp/")
   ;; EmacsWikiに登録されているelisp の名前を取得する
-  (auto-install-update-emacswiki-package-name t)
+;;  (auto-install-update-emacswiki-package-name t)
   ;; プロキシ設定
   ;; (setq url-proxy-services '(("http" . "localhost:8339")))
   ;; install-elisp の関数を利用可能にする
-  (auto-install-compatibility-setup))
+;;  (auto-install-compatibility-setup))
 
 ;;; anything
 ;; (auto-install-batch "naything")
@@ -328,10 +328,14 @@ are always included."
 ;; backup の保存先
 ;;
 (setq backup-directory-alist
-        (cons (cons ".*" (expand-file-name "~/backup/emacs/"))
+        (cons (cons ".*" (expand-file-name "~/backups/emacs/"))
 	              backup-directory-alist))
 
 (setq auto-save-file-name-transforms
-        `((".*", (expand-file-name "~/backup/emacs/") t)))
+        `((".*", (expand-file-name "~/backups/emacs/") t)))
 
-(setq auto-save-list-file-prefix "~/backup/emacs/")
+(setq auto-save-list-file-prefix "~/backups/emacs/")
+
+;; Powerline
+;; (require 'powerline)
+;; (powerline-default-theme)
