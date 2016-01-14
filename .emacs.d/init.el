@@ -335,3 +335,4 @@ are always included."
         `((".*", (expand-file-name "~/backup/emacs/") t)))
 
 (setq auto-save-list-file-prefix "~/backup/emacs/")
+
