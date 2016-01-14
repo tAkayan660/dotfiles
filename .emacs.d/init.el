@@ -427,6 +427,7 @@ static char * arrow_right[] = {
 		    :foreground "#fff"
 		    :background color4)
 
+<<<<<<< HEAD
 ;;
 ;; ctags
 ;;
@@ -435,3 +436,7 @@ static char * arrow_right[] = {
 ;; (setq ctags-command "ctags -R --fields=\"+afikKlmnsSzt\" ")
 ;; (global-set-key (kbd "<f5>") 'ctags-create-or-update-tags-table)
 ;; (global-set-key (kbd "M-.") 'ctags-search)
+=======
+(setq auto-save-list-file-prefix "~/backup/emacs/")
+
+>>>>>>> powerline有効化＆整理
