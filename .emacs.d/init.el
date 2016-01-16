@@ -216,20 +216,20 @@ are always included."
 		    :background "#000000"
 		    :height 1.0)
 (set-face-attribute 'tabbar-unselected nil
-		    :foreground "#000000"
-		    :background "#e5e5e5"
-		    :box nil)
-(set-face-attribute 'tabbar-selected nil
 		    :foreground "#e5e5e5"
 		    :background "#00cd00"
+		    :box nil)
+(set-face-attribute 'tabbar-selected nil
+		    :foreground "#00cd00"
+		    :background "#e5e5e5"
 		    :box nil)
 (set-face-attribute 'tabbar-button nil
 		    :box nil)
 ;; key bindings
 (global-set-key [(C-tab)]   'tabbar-forward-tab)
 (global-set-key [(C-S-tab)] 'tabbar-backward-tab)
-(global-set-key "\M-]"      'tabbar-forward-tab)
-(global-set-key "\M-["      'tabbar-backward-tab)
+(global-set-key (kbd "M-]")     'tabbar-forward-tab)
+(global-set-key (kbd "M-[")     'tabbar-backward-tab)
 
 
 ;; Flymake の設定
@@ -422,3 +422,13 @@ static char * arrow_right[] = {
 (set-face-attribute 'mode-line-inactive nil
 		    :foreground "#fff"
 		    :background color4)
+
+;;
+;; ctags
+;;
+;; (require 'ctags nil t)
+;; (setq tags-revert-without-query t)
+;; (setq ctags-command "ctags -R --fields=\"+afikKlmnsSzt\" ")
+;; (global-set-key (kbd "<f5>") 'ctags-create-or-update-tags-table)
+;; (global-set-key (kbd "M-.") 'ctags-search)
+
