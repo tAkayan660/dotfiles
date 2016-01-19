@@ -115,3 +115,4 @@ fi
 alias semacs="\emacs --daemon"
 alias emacs="emacsclient -nw"
 alias kemacs='emacsclient -e "(kill-emacs)"'
+function gl(){ gcc "$@" -lglut -lGLU -lGL;}
