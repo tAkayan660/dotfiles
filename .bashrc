@@ -115,11 +115,17 @@ fi
 alias semacs="\emacs --daemon"
 alias emacs="emacsclient -nw"
 alias kemacs='emacsclient -e "(kill-emacs)"'
+<<<<<<< HEAD
 alias vi="vim"
 alias vnc="vncviewer"
 function gl(){ gcc "$@" -lm -lglut -lGLU -lGL;}
 function parse_git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ {\1}/'
+=======
+function gl(){ gcc "$@" -lm -lglut -lGLU -lGL;}
+function parse_git_branch {
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
+>>>>>>> .bashrc設定追加
 }
 function promps {
     # 色は気分で変えたいかもしれないので変す宣言しておく
@@ -130,10 +136,17 @@ function promps {
     local  GRAY="\[\e[1;37m\]"
 
     case $TERM in
+<<<<<<< HEAD
 	xterm*) TITLEBAR='\[\e]0;\u@\h: \w\007\]';;
 	*)      TITLEBAR="";;
     esac
     local BASE="[\u]"
+=======
+	xterm*) TITLEBAR='\[\e]0;\w\007\]';;
+	*)      TITLEBAR="";;
+    esac
+    local BASE="\u@\h"
+>>>>>>> .bashrc設定追加
     PS1="${TITLEBAR}${WHITE}${BASE}${WHITE}:${BLUE}\W${GREEN}\$(parse_git_branch)${WHITE}\$${WHITE} "
 }
 promps
