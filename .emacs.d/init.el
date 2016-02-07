@@ -328,11 +328,15 @@ are always included."
 ;; backup の保存先
 ;;
 (setq backup-directory-alist
-        (cons (cons ".*" (expand-file-name "~/backup/emacs/"))
+        (cons (cons ".*" (expand-file-name "~/.backup/emacs/"))
 	              backup-directory-alist))
 
 (setq auto-save-file-name-transforms
-        `((".*", (expand-file-name "~/backup/emacs/") t)))
+        `((".*", (expand-file-name "~/.backup/emacs/") t)))
 
-(setq auto-save-list-file-prefix "~/backup/emacs/")
+(setq auto-save-list-file-prefix "~/.backup/emacs/")
 
+;;
+;; emacs-color-theme-solarized
+;;
+;; (load-theme 'solarized t)
