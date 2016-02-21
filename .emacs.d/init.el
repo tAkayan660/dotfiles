@@ -313,13 +313,13 @@ are always included."
 ;; backup の保存先
 ;;
 (setq backup-directory-alist
-        (cons (cons ".*" (expand-file-name "~/backups/emacs/"))
+        (cons (cons ".*" (expand-file-name "~/.backups/emacs/"))
 	              backup-directory-alist))
 
 (setq auto-save-file-name-transforms
-        `((".*", (expand-file-name "~/backups/emacs/") t)))
+        `((".*", (expand-file-name "~/.backups/emacs/") t)))
 
-(setq auto-save-list-file-prefix "~/backups/emacs/")
+(setq auto-save-list-file-prefix "~/.backups/emacs/")
 
 ;; Powerline
 ;; (require 'powerline)
