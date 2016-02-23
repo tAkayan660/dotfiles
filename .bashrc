@@ -117,7 +117,7 @@ alias emacs="emacsclient -nw"
 alias kemacs='emacsclient -e "(kill-emacs)"'
 function gl(){ gcc "$@" -lm -lglut -lGLU -lGL;}
 function parse_git_branch {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ {\1}/'
 }
 function promps {
     # 色は気分で変えたいかもしれないので変す宣言しておく
@@ -128,10 +128,10 @@ function promps {
     local  GRAY="\[\e[1;37m\]"
 
     case $TERM in
-	xterm*) TITLEBAR='\[\e]0;\w\007\]';;
+	xterm*) TITLEBAR='\[\e]0;\u@\h: \w\007\]';;
 	*)      TITLEBAR="";;
     esac
-    local BASE="\u@\h"
+    local BASE="[\u]"
     PS1="${TITLEBAR}${WHITE}${BASE}${WHITE}:${BLUE}\W${GREEN}\$(parse_git_branch)${WHITE}\$${WHITE} "
 }
 promps
