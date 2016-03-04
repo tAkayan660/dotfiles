@@ -44,6 +44,10 @@
 (set-face-attribute 'linum nil
 		    :foreground "#FFFF00"
 		    :height 0.9)
+;;
+;; タブ幅変更
+;;
+(setq default-tab-width 4)
 
 ;; package.elの設定
 (package-initialize)
@@ -431,4 +435,3 @@ static char * arrow_right[] = {
 ;; (setq ctags-command "ctags -R --fields=\"+afikKlmnsSzt\" ")
 ;; (global-set-key (kbd "<f5>") 'ctags-create-or-update-tags-table)
 ;; (global-set-key (kbd "M-.") 'ctags-search)
-
