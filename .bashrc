@@ -115,6 +115,7 @@ fi
 alias semacs="\emacs --daemon"
 alias emacs="emacsclient -nw"
 alias kemacs='emacsclient -e "(kill-emacs)"'
+alias vi="vim"
 function gl(){ gcc "$@" -lm -lglut -lGLU -lGL;}
 function parse_git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ {\1}/'
