@@ -317,7 +317,6 @@ are always included."
 ;; backup の保存先
 ;;
 (setq backup-directory-alist
-<<<<<<< HEAD
         (cons (cons ".*" (expand-file-name "~/.backups/emacs/"))
 	              backup-directory-alist))
 
@@ -428,7 +427,6 @@ static char * arrow_right[] = {
 		    :foreground "#fff"
 		    :background color4)
 
-<<<<<<< HEAD
 ;;
 ;; ctags
 ;;
@@ -437,21 +435,3 @@ static char * arrow_right[] = {
 ;; (setq ctags-command "ctags -R --fields=\"+afikKlmnsSzt\" ")
 ;; (global-set-key (kbd "<f5>") 'ctags-create-or-update-tags-table)
 ;; (global-set-key (kbd "M-.") 'ctags-search)
-=======
-(setq auto-save-list-file-prefix "~/backup/emacs/")
-
->>>>>>> powerline有効化＆整理
-=======
-        (cons (cons ".*" (expand-file-name "~/.backup/emacs/"))
-	              backup-directory-alist))
-
-(setq auto-save-file-name-transforms
-        `((".*", (expand-file-name "~/.backup/emacs/") t)))
-
-(setq auto-save-list-file-prefix "~/.backup/emacs/")
-
-;;
-;; emacs-color-theme-solarized
-;;
-;; (load-theme 'solarized t)
->>>>>>> .bashrc設定追加
