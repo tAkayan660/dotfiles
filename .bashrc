@@ -115,11 +115,8 @@ fi
 alias semacs="\emacs --daemon"
 alias emacs="emacsclient -nw"
 alias kemacs='emacsclient -e "(kill-emacs)"'
-<<<<<<< HEAD
 alias vi="vim"
 alias vnc="vncviewer"
-=======
->>>>>>> a8d1df1109d6c1735c574a81d3d2360a325b3410
 function gl(){ gcc "$@" -lm -lglut -lGLU -lGL;}
 function parse_git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
@@ -133,17 +130,10 @@ function promps {
     local  GRAY="\[\e[1;37m\]"
 
     case $TERM in
-<<<<<<< HEAD
 	xterm*) TITLEBAR='\[\e]0;\u@\h: \w\007\]';;
 	*)      TITLEBAR="";;
     esac
     local BASE="[\u]"
-=======
-	xterm*) TITLEBAR='\[\e]0;\w\007\]';;
-	*)      TITLEBAR="";;
-    esac
-    local BASE="\u@\h"
->>>>>>> a8d1df1109d6c1735c574a81d3d2360a325b3410
     PS1="${TITLEBAR}${WHITE}${BASE}${WHITE}:${BLUE}\W${GREEN}\$(parse_git_branch)${WHITE}\$${WHITE} "
 }
 promps

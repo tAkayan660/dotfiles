@@ -317,7 +317,6 @@ are always included."
 ;; backup の保存先
 ;;
 (setq backup-directory-alist
-<<<<<<< HEAD
         (cons (cons ".*" (expand-file-name "~/.backups/emacs/"))
 	              backup-directory-alist))
 
@@ -436,17 +435,3 @@ static char * arrow_right[] = {
 ;; (setq ctags-command "ctags -R --fields=\"+afikKlmnsSzt\" ")
 ;; (global-set-key (kbd "<f5>") 'ctags-create-or-update-tags-table)
 ;; (global-set-key (kbd "M-.") 'ctags-search)
-=======
-        (cons (cons ".*" (expand-file-name "~/.backup/emacs/"))
-	              backup-directory-alist))
-
-(setq auto-save-file-name-transforms
-        `((".*", (expand-file-name "~/.backup/emacs/") t)))
-
-(setq auto-save-list-file-prefix "~/.backup/emacs/")
-
-;;
-;; emacs-color-theme-solarized
-;;
-;; (load-theme 'solarized t)
->>>>>>> a8d1df1109d6c1735c574a81d3d2360a325b3410
