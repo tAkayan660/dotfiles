@@ -20,6 +20,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'nanotech/jellybeans.vim'
+" NeoBundle 'altercation/vim-colors-solarized'
 " NeoBundle 'w0ng/vim-hybrid'
 
 call neobundle#end()
@@ -31,21 +33,29 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
-colorscheme default
+colorscheme jellybeans
+let g:jellybeans_overrides = {
+\    'Todo': { 'guifg': '303030', 'guibg': 'f0f000',
+\              'ctermfg': 'Black', 'ctermbg': 'Yellow',
+\              'attr': 'bold' },
+\}
+set ts=4 sw=4 noet
 " vim-indent-guides
+set background=dark
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level=2
 let g:indent_guides_auto_colors=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#444433 ctermbg=black
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#333344 ctermbg=darkgray
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=black
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=0
+" let g:indent_guides_color_change_percent = 30
 let g:indent_guides_guide_size=1
 
 " 行表示
 set number
-hi LineNr ctermbg=11 ctermfg=3
-hi CursorLineNr ctermbg=3 ctermfg=0
+" hi LineNr ctermbg=11 ctermfg=3
+" hi CursorLineNr ctermbg=3 ctermfg=0
 set cursorline
-hi clear CursorLine
+" hi clear CursorLine
 
 " 表示画面幅を超える行を折り返して表示しない
 set nowrap
@@ -53,7 +63,6 @@ set nowrap
 set ic
 " モードラインの有効化
 set modeline
-set ts=4 sw=4 et
 set laststatus=2 
 " バックアップ先
 set backupdir=~/.backups/vim/
@@ -72,6 +81,22 @@ imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
 nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
 nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
 
+function! ZenkakuSpace()
+    highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
+endfunction
+
+" http://inari.hatenablog.com/entry/2014/05/05/231307
+" """"""""""""""""""""""""""""""
+" " 全角スペースの表示
+" """"""""""""""""""""""""""""""
+if has('syntax')
+    augroup ZenkakuSpace
+        autocmd!
+        autocmd ColorScheme * call ZenkakuSpace()
+        autocmd VimEnter,WinEnter,BufRead * let w:m1=matchadd('ZenkakuSpace', '　')
+    augroup END
+    call ZenkakuSpace()
+endif
 
 " vim-colors-solarized
 " syntax enable
