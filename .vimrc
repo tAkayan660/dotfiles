@@ -21,6 +21,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'https://github.com/Lokaltog/powerline.git'
+" NeoBundle 'Lokaltog/vim-powerline'
 " NeoBundle 'altercation/vim-colors-solarized'
 " NeoBundle 'w0ng/vim-hybrid'
 
@@ -39,7 +41,7 @@ let g:jellybeans_overrides = {
 \              'ctermfg': 'Black', 'ctermbg': 'Yellow',
 \              'attr': 'bold' },
 \}
-set ts=4 sw=4 noet
+set ts=4 sw=4 et
 " vim-indent-guides
 set background=dark
 let g:indent_guides_enable_on_vim_startup = 1
@@ -104,6 +106,11 @@ endif
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
+
+" Powerline
+set noshowmode
+let g:Powerline_symbols = 'fancy'
+" set t_Co=256
 
 " vim-colors-solarized
 " syntax enable
