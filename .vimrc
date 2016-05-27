@@ -20,7 +20,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'w0ng/vim-hybrid'
+" NeoBundle 'w0ng/vim-hybrid'
 
 call neobundle#end()
 
@@ -33,13 +33,18 @@ NeoBundleCheck
 
 " 行表示
 set number
+hi LineNr ctermbg=0 ctermfg=0
+hi CursorLineNr ctermbg=2 ctermfg=0
+set cursorline
+" hi clear CursorLine
+
 " 表示画面幅を超える行を折り返して表示しない
 set nowrap
 " 検索の時、大文字小文字を区別しない
 set ic
 " モードラインの有効化
 set modeline
-set ts=4 sw=4
+set ts=4 sw=4 et
 set laststatus=2 
 " バックアップ先
 set backupdir=~/.backups/vim/
@@ -67,6 +72,13 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#444433 ctermbg=black
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#333344 ctermbg=darkgray
 let g:indent_guides_guide_size=1
 
+" vim-colors-solarized
+" syntax enable
+" set background=0
+" colorscheme solarized
+
 " hybrid
-" set background=dark
+" let g:hybrid_use_iTerm_colors = 1
 " colorscheme hybrid
+" syntax on
+
