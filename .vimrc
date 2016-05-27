@@ -86,9 +86,9 @@ function! ZenkakuSpace()
 endfunction
 
 " http://inari.hatenablog.com/entry/2014/05/05/231307
-" """"""""""""""""""""""""""""""
-" " 全角スペースの表示
-" """"""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""
+" 全角スペースの表示
+""""""""""""""""""""""""""""""
 if has('syntax')
     augroup ZenkakuSpace
         autocmd!
@@ -97,6 +97,13 @@ if has('syntax')
     augroup END
     call ZenkakuSpace()
 endif
+
+""""""""""""""""""""""""""""""
+" 自動的に閉じ括弧を入力
+""""""""""""""""""""""""""""""
+imap { {}<LEFT>
+imap [ []<LEFT>
+imap ( ()<LEFT>
 
 " vim-colors-solarized
 " syntax enable
