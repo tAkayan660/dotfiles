@@ -42,10 +42,10 @@ let g:indent_guides_guide_size=1
 
 " 行表示
 set number
-hi LineNr ctermbg=0 ctermfg=0
-hi CursorLineNr ctermbg=2 ctermfg=0
+hi LineNr ctermbg=11 ctermfg=3
+hi CursorLineNr ctermbg=3 ctermfg=0
 set cursorline
-" hi clear CursorLine
+hi clear CursorLine
 
 " 表示画面幅を超える行を折り返して表示しない
 set nowrap
