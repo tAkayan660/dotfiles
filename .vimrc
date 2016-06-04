@@ -20,11 +20,17 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'https://github.com/Lokaltog/powerline.git'
+" NeoBundle 'nanotech/jellybeans.vim'
+" NeoBundle 'alpaca-tc/alpaca_powertabline'
+" NeoBundle 'https://github.com/Lokaltog/powerline.git'
+" NeoBundle 'https://github.com/Lokaltog/vim-powerline'
+" NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
+" NeoBundle 'jmcantrell/vim-virtualenv'
 " NeoBundle 'Lokaltog/vim-powerline'
 " NeoBundle 'altercation/vim-colors-solarized'
-" NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'w0ng/vim-hybrid'
 
 call neobundle#end()
 
@@ -35,22 +41,17 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
-colorscheme jellybeans
-let g:jellybeans_overrides = {
-\    'Todo': { 'guifg': '303030', 'guibg': 'f0f000',
-\              'ctermfg': 'Black', 'ctermbg': 'Yellow',
-\              'attr': 'bold' },
-\}
+" colorscheme jellybeans
 set ts=4 sw=4 et
 " vim-indent-guides
-set background=dark
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level=2
-let g:indent_guides_auto_colors=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=black
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=0
+" set background=dark
+" let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_start_level=2
+" let g:indent_guides_auto_colors=0
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=black
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=0
 " let g:indent_guides_color_change_percent = 30
-let g:indent_guides_guide_size=1
+" let g:indent_guides_guide_size=1
 
 " 行表示
 set number
@@ -64,8 +65,8 @@ set nowrap
 " 検索の時、大文字小文字を区別しない
 set ic
 " モードラインの有効化
-set modeline
-set laststatus=2 
+" set modeline
+" set laststatus=2
 " バックアップ先
 set backupdir=~/.backups/vim/
 "
@@ -107,10 +108,20 @@ imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
 
+
 " Powerline
-set noshowmode
-let g:Powerline_symbols = 'fancy'
+" set statusline=2
+" set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+" set noshowmode
+" let g:Powerline_symbols = 'fancy'
 " set t_Co=256
+
+" vim-airline
+set t_Co=256
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline_enable_branch = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " vim-colors-solarized
 " syntax enable
@@ -118,7 +129,8 @@ let g:Powerline_symbols = 'fancy'
 " colorscheme solarized
 
 " hybrid
-" let g:hybrid_use_iTerm_colors = 1
-" colorscheme hybrid
-" syntax on
+let g:hybrid_use_iTerm_colors = 1
+set background=dark
+colorscheme hybrid
+syntax on
 
