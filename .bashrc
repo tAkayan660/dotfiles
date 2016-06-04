@@ -120,21 +120,35 @@ alias vnc="vncviewer"
 alias matlab="matlab -softwareopengl"
 function gl(){ gcc "$@" -lm -lglut -lGLU -lGL;}
 function parse_git_branch {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1 /'
 }
 function promps {
     # 色は気分で変えたいかもしれないので変す宣言しておく
     local  BLUE="\[\e[1;34m\]"
+    local  SKY_BLUE="\[\e[1;36m\]"
     local  RED="\[\e[1;31m\]"
     local  GREEN="\[\e[1;32m\]"
     local  WHITE="\[\e[00m\]"
     local  GRAY="\[\e[1;37m\]"
+    local  YELLOW="\[\e[33m\]"
+
+    local  SKY_BLUE_BACK="\[\e[1;46m\]"
+    local  PURPLE_BACK="\[\e[45m\]"
+
+    local  COLOR_RESET="\[\e[0m\]"
 
     case $TERM in
 	xterm*) TITLEBAR='\[\e]0;\u@\h: \w\007\]';;
 	*)      TITLEBAR="";;
     esac
     local BASE="[\u]"
-    PS1="${TITLEBAR}${WHITE}${BASE}${WHITE}:${BLUE}\W${GREEN}\$(parse_git_branch)${WHITE}\$${WHITE} "
+    PS1="${TITLEBAR}${GRAY}${BASE}${WHITE}:${SKY_BLUE}\W${COLOR_RESET}${PURPLE_BACK}\$(parse_git_branch)${WHITE}\$${WHITE} "
 }
 promps
+
+# PowerLine
+#function _update_ps1() {
+#        export PS1="$(~/powerline-shell.py $? 2> /dev/null)"
+#    }
+#    export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+
