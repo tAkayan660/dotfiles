@@ -21,16 +21,13 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'nathanaelkane/vim-indent-guides'
 " NeoBundle 'nanotech/jellybeans.vim'
-" NeoBundle 'alpaca-tc/alpaca_powertabline'
 " NeoBundle 'https://github.com/Lokaltog/powerline.git'
-" NeoBundle 'https://github.com/Lokaltog/vim-powerline'
-" NeoBundle 'bling/vim-airline'
+" NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
-" NeoBundle 'jmcantrell/vim-virtualenv'
-" NeoBundle 'Lokaltog/vim-powerline'
-" NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'w0ng/vim-hybrid'
+" test
+NeoBundle 'tpope/vim-fugitive'
 
 call neobundle#end()
 
@@ -120,13 +117,8 @@ imap ( ()<LEFT>
 set t_Co=256
 set laststatus=2
 let g:airline_powerline_fonts = 1
-let g:airline_enable_branch = 1
 let g:airline#extensions#tabline#enabled = 1
-
-" vim-colors-solarized
-" syntax enable
-" set background=0
-" colorscheme solarized
+let g:airline#extensions#branch#enabled = 1
 
 " hybrid
 let g:hybrid_use_iTerm_colors = 1
