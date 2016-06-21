@@ -21,13 +21,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'nathanaelkane/vim-indent-guides'
 " NeoBundle 'nanotech/jellybeans.vim'
-" NeoBundle 'https://github.com/Lokaltog/powerline.git'
-" NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'vim-scripts/gtags.vim'
-" NeoBundle '5t111111/alt-gtags.vim'
 " test
 NeoBundle 'tpope/vim-fugitive'
 
@@ -79,14 +76,6 @@ for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
 endfor
 imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
 
-" ctags
-nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
-nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
-
-function! ZenkakuSpace()
-    highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
-endfunction
-
 " http://inari.hatenablog.com/entry/2014/05/05/231307
 """"""""""""""""""""""""""""""
 " 全角スペースの表示
@@ -107,20 +96,13 @@ imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
 
-
-" Powerline
-" set statusline=2
-" set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-" set noshowmode
-" let g:Powerline_symbols = 'fancy'
-" set t_Co=256
-
 " vim-airline
 set t_Co=256
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
+let b:airline_whitespace_disabled = 1
 
 " hybrid
 let g:hybrid_use_iTerm_colors = 1
