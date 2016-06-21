@@ -26,6 +26,8 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'vim-scripts/gtags.vim'
+" NeoBundle '5t111111/alt-gtags.vim'
 " test
 NeoBundle 'tpope/vim-fugitive'
 
@@ -126,3 +128,9 @@ set background=dark
 colorscheme hybrid
 syntax on
 
+" gtags
+map <C-g> :Gtags 
+map <C-h> :Gtags -f %<CR>
+map <C-j> :GtagsCursor<CR>
+map <C-n> :cn<CR>
+map <C-p> :cp<CR>
