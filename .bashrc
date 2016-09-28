@@ -119,6 +119,7 @@ alias vi="vim"
 alias vnc="vncviewer"
 alias matlab="matlab -softwareopengl"
 alias eclipse="~/projects/eclipse/eclipse"
+alias scilab="~/scilab-5.5.2/bin/scilab -l en_US"
 function gl(){ gcc "$@" -lm -lglut -lGLU -lGL;}
 function parse_git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1 /'
