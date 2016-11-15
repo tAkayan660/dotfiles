@@ -153,3 +153,4 @@ promps
 #    }
 #    export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 
+alias meshlab="~/MeshLabSrc_AllInc_v133/meshlab/src/distrib/meshlab"
