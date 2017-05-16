@@ -118,7 +118,7 @@ alias kemacs='emacsclient -e "(kill-emacs)"'
 alias vi="vim"
 alias vnc="vncviewer"
 alias matlab="matlab -softwareopengl"
-alias scilab="~/scilab-5.5.2/bin/scilab -l en_US"
+alias scilab="~/scilab*/bin/scilab -l en_US"
 function gl(){ gcc "$@" -lm -lglut -lGLU -lGL;}
 function parse_git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1 /'
@@ -153,4 +153,11 @@ promps
 #    }
 #    export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 
-alias meshlab="~/MeshLabSrc_AllInc_v133/meshlab/src/distrib/meshlab"
+alias meshlab="~/MeshLabSrc_AllInc_*/meshlab/src/distrib/meshlab"
+alias minecraft='java -Xms8192m -Xmx8192m -jar ~/minecraft/Minecraft.jar'
+alias eagle="~/eagle-*/eagle"
+
+#pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

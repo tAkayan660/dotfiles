@@ -22,11 +22,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'nathanaelkane/vim-indent-guides'
-" NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'vim-scripts/gtags.vim'
+"NeoBundle 'vim-scripts/gtags.vim'
+NeoBundle 'The-NERD-tree'
+NeoBundle 'taglist.vim'
+NeoBundle 'https://github.com/wesleyche/SrcExpl.git'
+NeoBundle 'https://github.com/wesleyche/Trinity.git'
 " test
 NeoBundle 'tpope/vim-fugitive'
 
@@ -39,17 +42,8 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
-" colorscheme jellybeans
-set ts=4 sw=4 et
-" vim-indent-guides
-" set background=dark
-" let g:indent_guides_enable_on_vim_startup = 1
-" let g:indent_guides_start_level=2
-" let g:indent_guides_auto_colors=0
-" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=black
-" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=0
-" let g:indent_guides_color_change_percent = 30
-" let g:indent_guides_guide_size=1
+" set ts=4 sw=4 et
+set expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 " 行表示
 set number
@@ -68,6 +62,7 @@ set backupdir=~/.backups/vim/
 "
 set encoding=utf-8
 set fileencodings=ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932,utf-8
+set fileformats=unix,dos,mac
 
 """""""""""""""""""""""""""""
 " 自動補完
@@ -123,8 +118,25 @@ syntax on
 """"""""""""""""""""""""""""""
 " gtags
 """"""""""""""""""""""""""""""
-map <C-g> :Gtags 
+map <C-g> :Gtags -g
 map <C-h> :Gtags -f %<CR>
 map <C-j> :GtagsCursor<CR>
 map <C-n> :cn<CR>
 map <C-p> :cp<CR>
+
+"""""""""""""""""""""""""""""" 
+" SrcExpl
+""""""""""""""""""""""""""""""
+" tagsは自動で作成する
+let g:SrcExpl_UpdateTags    = 1
+" プレビューウインドウの高さ
+" let g:SrcExpl_WinHeight     = 7
+
+""""""""""""""""""""""""""""""
+" 自動コメントアウト無効化
+""""""""""""""""""""""""""""""
+augroup auto_comment_off
+    autocmd!
+    autocmd BufEnter * setlocal formatoptions-=r
+    autocmd BufEnter * setlocal formatoptions-=o
+augroup END
