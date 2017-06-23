@@ -156,8 +156,3 @@ promps
 alias meshlab="~/MeshLabSrc_AllInc_*/meshlab/src/distrib/meshlab"
 alias minecraft='java -Xms8192m -Xmx8192m -jar ~/minecraft/Minecraft.jar'
 alias eagle="~/eagle-*/eagle"
-
-#pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
