@@ -25,7 +25,7 @@ fi
 #fi
 
 # Essential
-source ~/.zplug/init.zsh
+#source ~/.zplug/init.zsh
 
 # What does this do?
 #zplug "junegunn/fzf-bin", \
@@ -60,15 +60,15 @@ source ~/.zplug/init.zsh
 # Then, source packages and add commands to $PATH
 #zplug load --verbose
 
-source ~/git/enhancd/init.sh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#source ~/git/zaw/zaw-launcher.zsh
-source ~/git/zsh-completions/zsh-completions.plugin.zsh
-source ~/git/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ~/.zsh/enhancd/init.sh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source ~/.zsh/zaw/zaw-launcher.zsh
+source ~/.zsh/zsh-completions/zsh-completions.plugin.zsh
+source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # Powerline
 function powerline_precmd() {
-PS1="$(~/powerline-shell.py --cwd-max-depth 1 $? --shell zsh 2> /dev/null)"
+    PS1="$(~/.zsh/powerline-shell/powerline-shell.py --cwd-max-depth 1 $? --shell zsh 2> /dev/null)"
 }
 
 function install_powerline_precmd() {
