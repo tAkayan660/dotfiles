@@ -21,6 +21,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search.git ~/.zsh/z
 git clone https://github.com/jhawthorn/fzy.git ~/.zsh/fzy
 cd ~/.zsh/fzy
 sudo make install
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
 #powerline
 git clone https://github.com/banga/powerline-shell.git ~/.zsh/powerline-shell
