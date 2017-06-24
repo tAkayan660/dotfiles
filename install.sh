@@ -18,9 +18,9 @@ git clone https://github.com/b4b4r07/enhancd.git ~/.zsh/enhancd
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-completions.git ~/.zsh/zsh-completions
 git clone https://github.com/zsh-users/zsh-history-substring-search.git ~/.zsh/zsh-history-substring-search
-git clone https://github.com/jhawthorn/fzy.git ~/.zsh/fzy
-cd ~/.zsh/fzy
-sudo make install
+#git clone https://github.com/jhawthorn/fzy.git ~/.zsh/fzy
+#cd ~/.zsh/fzy
+#sudo make install
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 git clone https://github.com/junegunn/fzf.git ~/.zsh/fzf
 cd ~/.zsh/fzf
