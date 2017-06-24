@@ -1,3 +1,5 @@
+#!/bin/sh
+
 #dotfiles
 git clone https://github.com/tAkayan660/dotfiles.git
 
