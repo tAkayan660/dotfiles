@@ -22,6 +22,9 @@ git clone https://github.com/jhawthorn/fzy.git ~/.zsh/fzy
 cd ~/.zsh/fzy
 sudo make install
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+git clone https://github.com/junegunn/fzf.git ~/.zsh/fzf
+cd ~/.zsh/fzf
+./install
 
 #powerline
 git clone https://github.com/banga/powerline-shell.git ~/.zsh/powerline-shell

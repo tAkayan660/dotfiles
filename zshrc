@@ -15,6 +15,7 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #source ~/.zsh/zaw/zaw-launcher.zsh
 source ~/.zsh/zsh-completions/zsh-completions.plugin.zsh
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Powerline
 function powerline_precmd() {
