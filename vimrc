@@ -32,6 +32,7 @@ NeoBundle 'https://github.com/wesleyche/SrcExpl.git'
 NeoBundle 'https://github.com/wesleyche/Trinity.git'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'vim-syntastic/syntastic.git'
+NeoBundle 'majutsushi/tagbar'
 " test
 NeoBundle 'tpope/vim-fugitive'
 
@@ -217,3 +218,8 @@ augroup auto_comment_off
     autocmd BufEnter * setlocal formatoptions-=r
     autocmd BufEnter * setlocal formatoptions-=o
 augroup END
+
+""""""""""""""""""""""""""""""
+" tagbar
+""""""""""""""""""""""""""""""
+nmap <F8> :TagbarToggle<CR>
