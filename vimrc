@@ -34,6 +34,10 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'vim-syntastic/syntastic.git'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
+NeoBundle 'terryma/vim-multiple-cursors'
 " test
 NeoBundle 'tpope/vim-fugitive'
 
@@ -224,3 +228,15 @@ augroup END
 " tagbar
 """"""""""""""""""""""""""""""
 nmap <F8> :TagbarToggle<CR>
+
+""""""""""""""""""""""""""""""
+" ultisnips
+""""""""""""""""""""""""""""""
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
