@@ -33,6 +33,7 @@ NeoBundle 'https://github.com/wesleyche/Trinity.git'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'vim-syntastic/syntastic.git'
 NeoBundle 'majutsushi/tagbar'
+NeoBundle 'airblade/vim-gitgutter'
 " test
 NeoBundle 'tpope/vim-fugitive'
 
