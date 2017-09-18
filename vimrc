@@ -30,9 +30,10 @@ NeoBundle 'The-NERD-tree'
 NeoBundle 'taglist.vim'
 NeoBundle 'https://github.com/wesleyche/SrcExpl.git'
 NeoBundle 'https://github.com/wesleyche/Trinity.git'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'vim-syntastic/syntastic.git'
 " test
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'Shougo/neocomplete.vim'
 
 call neobundle#end()
 
@@ -75,8 +76,6 @@ set fileformats=unix,dos,mac
 "imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
 
 "neocomplete
-let g:neocomplete#enable_at_startup = 1
-
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
