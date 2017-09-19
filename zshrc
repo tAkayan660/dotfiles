@@ -59,6 +59,9 @@ export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_ PATH
 export CUDA_PATH=/usr/local/cuda
 
+# GNU GLOBAL
+export GTAGSLABEL=pygments
+
 # time
 if (which zprof > /dev/null) ;then
     zprof | less

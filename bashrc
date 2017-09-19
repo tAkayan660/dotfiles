@@ -156,3 +156,6 @@ promps
 alias meshlab="~/MeshLabSrc_AllInc_*/meshlab/src/distrib/meshlab"
 alias minecraft='java -Xms8192m -Xmx8192m -jar ~/minecraft/Minecraft.jar'
 alias eagle="~/eagle-*/eagle"
+
+# GNU GLOBAL
+export GTAGSLABEL=pygments
