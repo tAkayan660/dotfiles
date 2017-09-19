@@ -39,6 +39,7 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'zebult/auto-gtags.vim'
 
 call neobundle#end()
 
@@ -66,7 +67,6 @@ set ic
 " バックアップ先
 """""""""""""""""""""""""""""
 set backupdir=~/.backups/vim/
-"
 set encoding=utf-8
 set fileencodings=ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932,utf-8
 set fileformats=unix,dos,mac
@@ -210,3 +210,8 @@ nmap <F8> :TagbarToggle<CR>
 
 " If you want :UltiSnipsEdit to split your window.
 "let g:UltiSnipsEditSplit="vertical"
+
+""""""""""""""""""""""""""""""
+" auto-gtags.vim
+""""""""""""""""""""""""""""""
+let g:auto_gtags = 1
