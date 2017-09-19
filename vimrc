@@ -25,11 +25,10 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'w0ng/vim-hybrid'
-"NeoBundle 'vim-scripts/gtags.vim'
-NeoBundle 'The-NERD-tree'
-NeoBundle 'taglist.vim'
-NeoBundle 'https://github.com/wesleyche/SrcExpl.git'
-NeoBundle 'https://github.com/wesleyche/Trinity.git'
+NeoBundle 'scrooloose/nerdtree'
+"NeoBundle 'taglist.vim'
+"NeoBundle 'wesleyche/SrcExpl.git'
+"NeoBundle 'wesleyche/Trinity.git'
 "NeoBundle 'SirVer/ultisnips'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'vim-syntastic/syntastic.git'
@@ -50,7 +49,7 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
-" set ts=4 sw=4 et
+"set ts=4 sw=4 et
 set expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 " 行表示
@@ -58,7 +57,7 @@ set number
 set cursorline
 
 " 表示画面幅を超える行を折り返して表示しない
-" set nowrap
+"set nowrap
 
 " 検索の時、大文字小文字を区別しない
 set ic
@@ -181,9 +180,9 @@ map <C-p> :cp<CR>
 " SrcExpl
 """"""""""""""""""""""""""""""
 " tagsは自動で作成する
-let g:SrcExpl_UpdateTags    = 1
+"let g:SrcExpl_UpdateTags    = 1
 " プレビューウインドウの高さ
-" let g:SrcExpl_WinHeight     = 7
+"let g:SrcExpl_WinHeight     = 7
 
 """"""""""""""""""""""""""""""
 " 自動コメントアウト無効化
@@ -215,3 +214,8 @@ nmap <F8> :TagbarToggle<CR>
 " auto-gtags.vim
 """"""""""""""""""""""""""""""
 let g:auto_gtags = 1
+
+""""""""""""""""""""""""""""""
+" NERDTree
+""""""""""""""""""""""""""""""
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
