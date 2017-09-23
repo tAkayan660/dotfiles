@@ -62,6 +62,11 @@ set cursorline
 " 検索の時、大文字小文字を区別しない
 set ic
 
+" 検索ハイライト
+set hlsearch
+" 消す
+nnoremap <ESC><ESC>:nohlsearch<CR>
+
 """""""""""""""""""""""""""""
 " バックアップ先
 """""""""""""""""""""""""""""
@@ -175,6 +180,11 @@ map <C-h> :Gtags -f %<CR>
 map <C-j> :GtagsCursor<CR>
 map <C-n> :cn<CR>
 map <C-p> :cp<CR>
+
+"tagFileの指定
+if has('path_extra')
+    set tags+=tags;/home/$HOME
+endif
 
 """""""""""""""""""""""""""""" 
 " SrcExpl
