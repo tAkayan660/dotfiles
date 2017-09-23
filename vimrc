@@ -65,7 +65,7 @@ set ic
 " 検索ハイライト
 set hlsearch
 " 消す
-nnoremap <ESC><ESC>:nohlsearch<CR>
+nnoremap <ESC><ESC> :noh<CR>
 
 """""""""""""""""""""""""""""
 " バックアップ先
