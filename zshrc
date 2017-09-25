@@ -62,6 +62,9 @@ export CUDA_PATH=/usr/local/cuda
 # GNU GLOBAL
 export GTAGSLABEL=pygments
 
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 # time
 if (which zprof > /dev/null) ;then
     zprof | less
