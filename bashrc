@@ -162,3 +162,6 @@ export GTAGSLABEL=pygments
 
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
