@@ -56,7 +56,7 @@ read ZSH_DEF
 
 case $ZSH_DEF in
     "" | "Y" | "y" | "YES" | "Yes" | "yes" ) 
-        chsh -s /usr/bin/zsh
+        sudo chsh -s /usr/bin/zsh
         ;;
     * ) ;;
 esac
