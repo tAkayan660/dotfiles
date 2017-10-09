@@ -40,7 +40,7 @@ yes | ./install
 git clone https://github.com/banga/powerline-shell.git ~/.zsh/powerline-shell
 cd ~/.zsh/powerline-shell
 sudo ./setup.py install
-pip install -r requirements-dev.txt
+sudo pip install -r requirements-dev.txt
 
 #Symbolic link
 ln -s ${DOTFILES_DIR}/vimrc ~/.vimrc
