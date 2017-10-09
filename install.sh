@@ -6,7 +6,7 @@ DOTFILES_DIR=$(cd $(dirname $0) && pwd)/dotfiles
 
 #Package install
 sudo apt-get -q update
-sudo apt-get -y git vim bash zsh
+sudo apt-get -y git vim bash zsh python
 
 #dotfiles
 git clone https://github.com/tAkayan660/dotfiles.git
