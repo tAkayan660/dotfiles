@@ -51,12 +51,13 @@ ln -s ${DOTFILES_DIR}/zshenv ~/.zshenv
 ln -s ${DOTFILES_DIR}/powerline-shell.json ~/.powerline-shell.json
 
 #Sh selection
-echo -n "Would you like to set the default sh to 'zsh'?"
-read ZSH_DEF
+if [ ! $SHELL = "/usr/bin/zsh" ]; then
+    read -p "Would you like to set the default sh to 'zsh'? [Y/n]: " ZSH_DEF
 
-case $ZSH_DEF in
-    "" | "Y" | "y" | "YES" | "Yes" | "yes" ) 
-        sudo chsh -s /usr/bin/zsh
-        ;;
-    * ) ;;
-esac
+    case $ZSH_DEF in
+        "" | "Y" | "y" | "YES" | "Yes" | "yes" ) 
+            sudo chsh -s /usr/bin/zsh
+            ;;
+        * ) ;;
+    esac
+fi
