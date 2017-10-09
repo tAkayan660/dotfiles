@@ -1,0 +1,15 @@
+{
+    "segments": [
+        "username",
+        "ssh",
+        "cwd",
+        "read_only",
+        "git",
+        "svn",
+        "jobs",
+        "root"
+    ],
+    "cwd": {
+        "mode": "dironly"
+    }
+}

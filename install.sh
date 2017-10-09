@@ -1,10 +1,18 @@
 #!/bin/sh
 
+set -u
+
+DOTFILES_DIR=$(cd $(dirname $0) && pwd)/dotfiles
+
+#Package install
+sudo apt-get -q update
+sudo apt-get -y git vim bash zsh
+
 #dotfiles
 git clone https://github.com/tAkayan660/dotfiles.git
 
 #emacs
-cd dotfiles/emacs.d/public_repos/
+cd ${DOTFILES_DIR}/emacs.d/public_repos/
 git clone https://github.com/ancane/emacs-nav.git
 git clone https://github.com/auto-complete/popup-el.git
 git clone https://github.com/milkypostman/powerline.git
@@ -26,9 +34,30 @@ git clone https://github.com/zsh-users/zsh-history-substring-search.git ~/.zsh/z
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 git clone https://github.com/junegunn/fzf.git ~/.zsh/fzf
 cd ~/.zsh/fzf
-./install
+yes | ./install
 
 #powerline
 git clone https://github.com/banga/powerline-shell.git ~/.zsh/powerline-shell
 cd ~/.zsh/powerline-shell
-./install.py
+sudo ./setup.py install
+pip install -r requirements-dev.txt
+
+#Symbolic link
+ln -s ${DOTFILES_DIR}/vimrc ~/.vimrc
+#ln -s ${DOTFILES_DIR}/emacs.d ~/.emacs.d
+ln -s ${DOTFILES_DIR}/bashrc ~/.bashrc
+ln -s ${DOTFILES_DIR}/zshrc ~/.zshrc
+ln -s ${DOTFILES_DIR}/zshenv ~/.zshenv
+ln -s ${DOTFILES_DIR}/powerline-shell.json ~/.powerline-shell.json
+
+#Sh selection
+echo -n "Would you like to set the default sh to 'zsh'?"
+read ZSH_DEF
+
+case $ZSH_DEF in
+    "" | "Y" | "y" | "YES" | "Yes" | "yes" ) 
+        chsh -s /usr/bin/zsh
+        zsh
+        ;;
+    * ) ;;
+esac

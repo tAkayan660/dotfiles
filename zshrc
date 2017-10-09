@@ -19,7 +19,7 @@ source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # Powerline
 function powerline_precmd() {
-    PS1="$(~/.zsh/powerline-shell/powerline-shell.py --cwd-max-depth 1 $? --shell zsh 2> /dev/null)"
+    PS1="$(powerline-shell --shell zsh $?)"
 }
 
 function install_powerline_precmd() {
