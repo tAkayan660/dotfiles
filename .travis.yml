@@ -1,0 +1,5 @@
+language: sh
+
+sudo: required
+
+script: yes | ./install.sh
