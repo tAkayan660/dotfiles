@@ -21,6 +21,9 @@ git clone https://github.com/milkypostman/powerline.git
 mkdir -p ~/.backups/vim/
 mkdir -p ~/.vim/bundle
 git clone https://github.com/Shougo/neobundle.vim.git ~/.vim/bundle/neobundle.vim
+git clone https://github.com/powerline/fonts.git ~/.fonts
+cd ~/.fonts
+./install.sh
 
 #zsh
 mkdir ~/.zsh
