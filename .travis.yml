@@ -1,4 +1,6 @@
-language: sh
+language: 
+    sh
+    python
 
 sudo: required
 
