@@ -1,10 +1,8 @@
 # dotfiles
-![](https://travis-ci.org/takayan660/dotfiles.svg?branch=master)
+![Travis-CI](https://travis-ci.org/takayan660/dotfiles.svg?branch=master)
 
 ## OS
-Ubuntu 14.04
-
-Ubuntu 16.04
+Ubuntu 14.04, 16.04
 
 ## install
 dotfilesを保存したいデレクトリまで行き，端末で次のようにコマンドを入力する.<br>
