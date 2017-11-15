@@ -1,0 +1,27 @@
+#!/bin/sh
+
+#Uncomment the following two lines for normal desktop:
+#unset SESSION_MANAGER
+#exec /etc/X11/xinit/xinitrc
+# 日本語入力設定
+unset DBUS_SESSION_BUS_ADDRESS
+export GTK_IM_MODULE=ibus
+export XMODIFIERS="@im=ibus"
+export QT_IM_MODULE=ibus
+/usr/bin/ibus-daemon -dxr
+
+[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+xsetroot -solid grey
+#vncconfig -iconic &
+#x-terminal-emulator -geometry 1024x768 -ls -title "$VNCDESKTOP Desktop" &
+#x-window-manager &
+
+gnome-session --session=ubuntu &
+metacity &
+nautilus --no-default-window &
+gnome-settings-daemon &
+#gnome-panel &
+lxpanel &
+
+gnome-terminal &
