@@ -165,3 +165,6 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# ROS kinetic
+source /opt/ros/kinetic/setup.bash

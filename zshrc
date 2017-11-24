@@ -74,3 +74,6 @@ fi
 if [ $DOTFILES/.zshrc -nt ~/.zshrc.zwc ]; then
     zcompile ~/.zshrc
 fi
+
+# ROS kinetic
+source /opt/ros/kinetic/setup.zsh
