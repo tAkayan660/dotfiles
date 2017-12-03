@@ -45,6 +45,9 @@ cd ~/.zsh/powerline-shell
 sudo ./setup.py install
 sudo pip install -r requirements-dev.txt
 
+# tmux-powerline
+git clone https://github.com/erikw/tmux-powerline.git ~/.zsh/tmux-powerline
+
 #Symbolic link
 ln -s ${DOTFILES_DIR}/vimrc ~/.vimrc
 #ln -s ${DOTFILES_DIR}/emacs.d ~/.emacs.d
