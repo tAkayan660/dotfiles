@@ -56,6 +56,7 @@ ln -s ${DOTFILES_DIR}/bashrc ~/.bashrc
 ln -s ${DOTFILES_DIR}/zshrc ~/.zshrc
 ln -s ${DOTFILES_DIR}/zshenv ~/.zshenv
 ln -s ${DOTFILES_DIR}/powerline-shell.json ~/.powerline-shell.json
+ln -s ${DOTFILES_DIR}/tmux.conf ~/.tmux.conf
 
 # Sh selection
 if [ ! $SHELL = "/usr/bin/zsh" ]; then
