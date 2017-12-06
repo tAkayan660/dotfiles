@@ -168,3 +168,8 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # ROS kinetic
 source /opt/ros/kinetic/setup.bash
+
+# CUDA
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_ PATH
+export CUDA_PATH=/usr/local/cuda
