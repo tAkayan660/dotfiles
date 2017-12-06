@@ -42,6 +42,9 @@ alias scilab="~/scilab*/bin/scilab -l en_US"
 alias meshlab="~/MeshLabSrc_AllInc_*/meshlab/src/distrib/meshlab"
 alias minecraft='java -Xms8192m -Xmx8192m -jar ~/minecraft/Minecraft.jar'
 alias eagle="~/eagle-*/eagle"
+# pbcopy
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
 
 function apt-cache_search(){ apt-cache search "$@" | grep "$@"; }
 

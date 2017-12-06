@@ -156,6 +156,9 @@ promps
 alias meshlab="~/MeshLabSrc_AllInc_*/meshlab/src/distrib/meshlab"
 alias minecraft='java -Xms8192m -Xmx8192m -jar ~/minecraft/Minecraft.jar'
 alias eagle="~/eagle-*/eagle"
+# pbcopy
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
 
 # GNU GLOBAL
 export GTAGSLABEL=pygments
@@ -173,3 +176,5 @@ source /opt/ros/kinetic/setup.bash
 export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_ PATH
 export CUDA_PATH=/usr/local/cuda
+
+
