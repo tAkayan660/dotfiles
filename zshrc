@@ -79,4 +79,6 @@ if [ $DOTFILES/.zshrc -nt ~/.zshrc.zwc ]; then
 fi
 
 # ROS kinetic
-source /opt/ros/kinetic/setup.zsh
+if [ -d /opt/ros/kinetic/setup.zsh ]; then
+    source /opt/ros/kinetic/setup.zsh
+fi
