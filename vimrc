@@ -1,49 +1,44 @@
 """"""""""""""""""""""""""""
-" NeoBunble
+" dein.vim
 """"""""""""""""""""""""""""
-" Note: Skip initialization for vim-tiny or vim-small.
-if 0 | endif
-
 if &compatible
-    set nocompatible               " Be iMproved
+    set nocompatible
+endif
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+
+if dein#load_state('~/.vim/dein')
+    call dein#begin('~/.vim/dein')
+
+    call dein#add('Shougo/dein.vim')
+    call dein#add('Shougo/deoplete.nvim')
+    if !has('nvim')
+        call dein#add('roxma/nvim-yarp')
+        call dein#add('roxma/vim-hug-neovim-rpc')
+    endif
+
+    call dein#add('nathanaelkane/vim-indent-guides')
+    call dein#add('vim-airline/vim-airline')
+    call dein#add('vim-airline/vim-airline-themes')
+    call dein#add('w0ng/vim-hybrid')
+    call dein#add('scrooloose/nerdtree')
+    call dein#add('Shougo/neocomplete.vim')
+    call dein#add('vim-syntastic/syntastic.git')
+    call dein#add('majutsushi/tagbar')
+    call dein#add('airblade/vim-gitgutter')
+    call dein#add('scrooloose/nerdcommenter')
+    call dein#add('honza/vim-snippets')
+    call dein#add('terryma/vim-multiple-cursors')
+    call dein#add('tpope/vim-fugitive')
+    call dein#add('zebult/auto-gtags.vim')
+
+    call dein#end()
+    call dein#save_state()
 endif
 
-" Required:
-set runtimepath^=~/.vim/bundle/neobundle.vim/
-
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'vim-airline/vim-airline'
-NeoBundle 'vim-airline/vim-airline-themes'
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'vim-syntastic/syntastic.git'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'terryma/vim-multiple-cursors'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'zebult/auto-gtags.vim'
-
-call neobundle#end()
-
-" Required:
 filetype plugin indent on
+syntax enable
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
+""""""""""""""""""""""""""""
 
 set encoding=utf-8
 set fileencodings=ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932,utf-8

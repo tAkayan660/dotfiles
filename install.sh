@@ -6,7 +6,7 @@ DOTFILES_DIR=$(cd $(dirname $0) && pwd)/dotfiles
 
 # Package install
 sudo apt-get -q update
-sudo apt-get -y git vim bash zsh python-pip
+sudo apt-get -y git vim bash zsh python3-pip
 
 # dotfiles
 git clone https://github.com/tAkayan660/dotfiles.git
@@ -20,10 +20,10 @@ git clone https://github.com/milkypostman/powerline.git
 # vim
 mkdir -p ~/.backups/vim/
 mkdir -p ~/.vim/bundle
-git clone https://github.com/Shougo/neobundle.vim.git ~/.vim/bundle/neobundle.vim
-git clone https://github.com/powerline/fonts.git ~/.fonts
-cd ~/.fonts
-./install.sh
+mkdir -p ~/.vim/dein
+cd ~/.vim/dein
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./install.sh ./
 
 # zsh
 mkdir ~/.zsh
@@ -45,6 +45,9 @@ git clone https://github.com/banga/powerline-shell.git ~/.zsh/powerline-shell
 cd ~/.zsh/powerline-shell
 sudo ./setup.py install
 sudo pip install -r requirements-dev.txt
+git clone https://github.com/powerline/fonts.git ~/.fonts
+cd ~/.fonts
+./install.sh
 
 # tmux-powerline
 git clone https://github.com/erikw/tmux-powerline.git ~/.zsh/tmux-powerline
