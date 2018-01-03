@@ -20,7 +20,6 @@ git clone https://github.com/milkypostman/powerline.git
 # vim
 mkdir -p ~/.vim/backups
 mkdir -p ~/.vim/tmp
-mkdir -p ~/.vim/bundle
 mkdir -p ~/.vim/dein
 cd ~/.vim/dein
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
@@ -55,6 +54,8 @@ git clone https://github.com/erikw/tmux-powerline.git ~/.zsh/tmux-powerline
 
 # Symbolic link
 ln -s ${DOTFILES_DIR}/vimrc ~/.vimrc
+ln -s ${DOTFILES_DIR}/vim/dein/dein.toml ~/.vim/dein/
+ln -s ${DOTFILES_DIR}/vim/dein/dein_lazy.toml ~/.vim/dein/
 #ln -s ${DOTFILES_DIR}/emacs.d ~/.emacs.d
 ln -s ${DOTFILES_DIR}/bashrc ~/.bashrc
 ln -s ${DOTFILES_DIR}/zshrc ~/.zshrc
