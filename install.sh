@@ -44,7 +44,7 @@ yes | ./install
 git clone https://github.com/banga/powerline-shell.git ~/.zsh/powerline-shell
 cd ~/.zsh/powerline-shell
 sudo ./setup.py install
-sudo pip install -r requirements-dev.txt
+sudo pip3 install -r requirements-dev.txt
 git clone https://github.com/powerline/fonts.git ~/.fonts
 cd ~/.fonts
 ./install.sh
