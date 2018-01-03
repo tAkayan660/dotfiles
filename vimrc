@@ -16,16 +16,16 @@ if dein#load_state('~/.vim/dein')
         call dein#add('roxma/vim-hug-neovim-rpc')
     endif
 
+    call dein#add('Shougo/neocomplete.vim')
     call dein#add('nathanaelkane/vim-indent-guides')
     call dein#add('vim-airline/vim-airline')
     call dein#add('vim-airline/vim-airline-themes')
     call dein#add('w0ng/vim-hybrid')
     call dein#add('scrooloose/nerdtree')
-    call dein#add('Shougo/neocomplete.vim')
+    call dein#add('scrooloose/nerdcommenter')
     call dein#add('vim-syntastic/syntastic.git')
     call dein#add('majutsushi/tagbar')
     call dein#add('airblade/vim-gitgutter')
-    call dein#add('scrooloose/nerdcommenter')
     call dein#add('honza/vim-snippets')
     call dein#add('terryma/vim-multiple-cursors')
     call dein#add('tpope/vim-fugitive')
@@ -48,7 +48,7 @@ set fileformats=unix,dos,mac
 set autoindent
 set modeline
 
-set expandtab tabstop=4 shiftwidth=4 softtabstop=4
+set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
 " 行表示
 set number
@@ -68,17 +68,12 @@ nnoremap <ESC><ESC> :noh<CR>
 """""""""""""""""""""""""""""
 " バックアップ先
 """""""""""""""""""""""""""""
-set backupdir=~/.backups/vim/
+set directory=~/.vim/tmp
+set backupdir=~/.vim/backups/
 
 """""""""""""""""""""""""""""
 " 補完
 """""""""""""""""""""""""""""
-"set completeopt=menuone
-"for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
-"	exec "imap " . k . " " . k . "<C-X><C-P><C-N>"
-"endfor
-"imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
-
 " neocomplete
 "Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
@@ -126,6 +121,7 @@ endif
 "let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 " http://inari.hatenablog.com/entry/2014/05/05/231307
+
 """""""""""""""""""""""""""""
 " 全角スペースの表示
 """""""""""""""""""""""""""""
@@ -145,9 +141,9 @@ endif
 """"""""""""""""""""""""""""""
 " 自動的に閉じ括弧を入力
 """"""""""""""""""""""""""""""
-" imap { {}<LEFT>
-" imap [ []<LEFT>
-" imap ( ()<LEFT>
+"imap { {}<LEFT>
+"imap [ []<LEFT>
+"imap ( ()<LEFT>
 
 """"""""""""""""""""""""""""""
 " vim-airline
@@ -176,18 +172,10 @@ map <C-j> :GtagsCursor<CR>
 map <C-n> :cn<CR>
 map <C-p> :cp<CR>
 
-"tagFileの指定
+" tagFileの指定
 if has('path_extra')
     set tags+=tags;/home/$HOME
 endif
-
-"""""""""""""""""""""""""""""" 
-" SrcExpl
-""""""""""""""""""""""""""""""
-" tagsは自動で作成する
-"let g:SrcExpl_UpdateTags    = 1
-" プレビューウインドウの高さ
-"let g:SrcExpl_WinHeight     = 7
 
 """"""""""""""""""""""""""""""
 " 自動コメントアウト無効化
@@ -204,18 +192,6 @@ augroup END
 nmap <F8> :TagbarToggle<CR>
 
 """"""""""""""""""""""""""""""
-" ultisnips
-""""""""""""""""""""""""""""""
-" Trigger configuration. Do not use <tab> if you use
-" https://github.com/Valloric/YouCompleteMe.
-"let g:UltiSnipsExpandTrigger="<tab>"
-"let g:UltiSnipsJumpForwardTrigger="<c-b>"
-"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-"let g:UltiSnipsEditSplit="vertical"
-
-""""""""""""""""""""""""""""""
 " auto-gtags.vim
 """"""""""""""""""""""""""""""
 let g:auto_gtags = 1
@@ -224,3 +200,10 @@ let g:auto_gtags = 1
 " NERDTree
 """"""""""""""""""""""""""""""
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+""""""""""""""""""""""""""""""
+" vim-indent-guides
+""""""""""""""""""""""""""""""
+let g:indent_guides_enable_on_vim_startup = 0
+let g:indent_guides_start_level = 2
+let g:indent_guides_guides_size = 1

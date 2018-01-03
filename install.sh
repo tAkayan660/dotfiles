@@ -18,7 +18,8 @@ git clone https://github.com/auto-complete/popup-el.git
 git clone https://github.com/milkypostman/powerline.git
 
 # vim
-mkdir -p ~/.backups/vim/
+mkdir -p ~/.vim/backups
+mkdir -p ~/.vim/tmp
 mkdir -p ~/.vim/bundle
 mkdir -p ~/.vim/dein
 cd ~/.vim/dein
