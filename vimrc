@@ -9,14 +9,23 @@ set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 if dein#load_state('~/.vim/dein')
     call dein#begin('~/.vim/dein')
 
+    let g:rc_dir    = expand('~/.vim/dein')
+    let s:toml      = g:rc_dir . '/dein.toml'
+    let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+
+    call dein#load_toml(s:toml,      {'lazy': 0})
+    call dein#load_toml(s:lazy_toml, {'lazy': 1})
+
     call dein#add('Shougo/dein.vim')
-    call dein#add('Shougo/deoplete.nvim')
+    "call dein#add('Shougo/deoplete.nvim')
     if !has('nvim')
         call dein#add('roxma/nvim-yarp')
         call dein#add('roxma/vim-hug-neovim-rpc')
     endif
 
-    call dein#add('Shougo/neocomplete.vim')
+    call dein#add('Shougo/neocomplete')
+    call dein#add('Shougo/neosnippet')
+    call dein#add('Shougo/neosnippet-snippets')
     call dein#add('nathanaelkane/vim-indent-guides')
     call dein#add('vim-airline/vim-airline')
     call dein#add('vim-airline/vim-airline-themes')
@@ -37,6 +46,10 @@ endif
 
 filetype plugin indent on
 syntax enable
+
+if dein#check_install()
+    call dein#install()
+endif
 
 """"""""""""""""""""""""""""
 
@@ -207,3 +220,26 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 let g:indent_guides_enable_on_vim_startup = 0
 let g:indent_guides_start_level = 2
 let g:indent_guides_guides_size = 1
+
+""""""""""""""""""""""""""""""
+" neosnippet
+""""""""""""""""""""""""""""""
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+            \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+    set conceallevel=2 concealcursor=niv
+endif
