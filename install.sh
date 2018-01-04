@@ -52,6 +52,12 @@ cd ~/.fonts
 # tmux-powerline
 git clone https://github.com/erikw/tmux-powerline.git ~/.zsh/tmux-powerline
 
+# sshrc
+wget https://raw.githubusercontent.com/Russell91/sshrc/master/sshrc
+chmod +x sshrc
+sudo mv sshrc /usr/local/bin
+mkdir ~/.sshrc.d
+
 # Symbolic link
 ln -s ${DOTFILES_DIR}/vimrc ~/.vimrc
 ln -s ${DOTFILES_DIR}/vim/dein/dein.toml ~/.vim/dein/
@@ -62,6 +68,11 @@ ln -s ${DOTFILES_DIR}/zshrc ~/.zshrc
 ln -s ${DOTFILES_DIR}/zshenv ~/.zshenv
 ln -s ${DOTFILES_DIR}/powerline-shell.json ~/.powerline-shell.json
 ln -s ${DOTFILES_DIR}/tmux.conf ~/.tmux.conf
+ln -s ${DOTFILES_DIR}/sshrc ~/.sshrc
+ln -s ${DOTFILES_DIR}/vimrc ~/.sshrc.d/vimrc
+ln -s ${DOTFILES_DIR}/bashrc ~/.sshrc.d/bashrc
+ln -s ${DOTFILES_DIR}/tmux.conf ~/.sshrc.d/tmux.conf
+
 
 # Sh selection
 if [ ! $SHELL = "/usr/bin/zsh" ]; then
