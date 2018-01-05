@@ -30,7 +30,7 @@ if dein#load_state('~/.vim/dein')
     call dein#add('vim-airline/vim-airline')
     call dein#add('vim-airline/vim-airline-themes')
     call dein#add('w0ng/vim-hybrid')
-    call dein#add('scrooloose/nerdtree')
+    "call dein#add('scrooloose/nerdtree')
     call dein#add('scrooloose/nerdcommenter')
     call dein#add('vim-syntastic/syntastic.git')
     call dein#add('majutsushi/tagbar')
@@ -39,6 +39,8 @@ if dein#load_state('~/.vim/dein')
     call dein#add('terryma/vim-multiple-cursors')
     call dein#add('tpope/vim-fugitive')
     call dein#add('zebult/auto-gtags.vim')
+    call dein#add('justinmk/vim-dirvish')
+
 
     call dein#end()
     call dein#save_state()
@@ -212,7 +214,7 @@ let g:auto_gtags = 1
 """"""""""""""""""""""""""""""
 " NERDTree
 """"""""""""""""""""""""""""""
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+"nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 """"""""""""""""""""""""""""""
 " vim-indent-guides
