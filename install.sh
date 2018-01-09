@@ -49,9 +49,6 @@ git clone https://github.com/powerline/fonts.git ~/.fonts
 cd ~/.fonts
 ./install.sh
 
-# tmux-powerline
-git clone https://github.com/erikw/tmux-powerline.git ~/.zsh/tmux-powerline
-
 # sshrc
 wget https://raw.githubusercontent.com/Russell91/sshrc/master/sshrc
 chmod +x sshrc
