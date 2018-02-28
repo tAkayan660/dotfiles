@@ -59,9 +59,9 @@ alias history="history -E 1"
 
 # cuda
 if [ -e /usr/local/cuda ]; then
-       export PATH=/usr/local/cuda/bin:$PATH
-       export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-       export CUDA_PATH=/usr/local/cuda
+    export PATH=/usr/local/cuda/bin:$PATH
+    export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+    export CUDA_PATH=/usr/local/cuda
 fi
 
 # GNU GLOBAL
@@ -69,7 +69,7 @@ export GTAGSLABEL=pygments
 
 # nodebrew
 if [ -e $HOME/.nodebrew/ ]; then
-       export PATH=$HOME/.nodebrew/current/bin:$PATH
+    export PATH=$HOME/.nodebrew/current/bin:$PATH
 fi
 
 # time
