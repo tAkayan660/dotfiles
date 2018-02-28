@@ -36,9 +36,7 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'prompt' \
-  'git' \
-  'tmux' \
-  'ssh'
+  'git'
 
 #
 # Autosuggestions
