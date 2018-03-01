@@ -64,7 +64,8 @@ set fileformats=unix,dos,mac
 set autoindent
 set modeline
 
-set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+set tabstop=4 shiftwidth=4 softtabstop=4 "expandtab
+set wrapscan
 
 " 行表示
 set number
