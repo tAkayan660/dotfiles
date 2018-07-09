@@ -10,7 +10,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
     source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-source ~/.zsh/enhancd/init.sh
+#source ~/.zsh/enhancd/init.sh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #source ~/.zsh/zaw/zaw-launcher.zsh
 source ~/.zsh/zsh-completions/zsh-completions.plugin.zsh
@@ -36,6 +36,7 @@ source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 #fi
 
 # aliases
+alias vi="nvim"
 alias vnc="vncviewer"
 alias matlab="matlab -softwareopengl"
 alias scilab="~/scilab*/bin/scilab -l en_US"
@@ -71,6 +72,10 @@ export GTAGSLABEL=pygments
 if [ -e $HOME/.nodebrew/ ]; then
     export PATH=$HOME/.nodebrew/current/bin:$PATH
 fi
+
+# Neovim
+export XDG_CONFIG_HOME="~/.config"
+export XDG_CACHE_HOME="~/.cache"
 
 # time
 if (which zprof > /dev/null) ;then
