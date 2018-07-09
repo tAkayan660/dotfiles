@@ -1,25 +1,39 @@
 # dein_lazy.toml
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-hook_source = '''
-    let g:deoplete#enable_at_startup = 1
-    inoremap <expr><tab> pumvisible() ? "\<C-n>" :
-        \ neosnippet#expandable_or_jumpable() ?
-        \    "\<Plug>(neosnippet_expand_or_jump)" : "\<tab>"
-'''
-on_i = 1
-
-[[plugins]]
 repo = 'Shougo/neosnippet'
 hook_source = '''
     imap <C-k> <Plug>(neosnippet_expand_or_jump)
     smap <C-k> <Plug>(neosnippet_expand_or_jump)
     xmap <C-k> <Plug>(neosnippet_expand_target)
+	smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+			\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
     if has('conceal')
         set conceallevel=2 concealcursor=niv
     endif
 '''
-on_i  = 1
-on_ft = ['snippet']
+on_i	= 1
+on_ft	= ['snippet']
 depends = ['neosnippet-snippets']
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+on_i = 1
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+hook_source = '''
+	nmap <F8> :TagbarToggle<CR>
+'''
+on_i = 1
+
+[[plugins]]
+repo = 'zebult/auto-gtags.vim'
+hook_source = '''
+	let g:auto_gtags = 1
+'''
+on_i = 1
+
+[[plugins]]
+repo = 'justinmk/vim-dirvish'
+on_i = 1

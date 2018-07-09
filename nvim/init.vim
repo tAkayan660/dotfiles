@@ -25,33 +25,6 @@ if dein#load_state($DEIN_CACHE_DIR)
 	call dein#load_toml($TOML,      {'lazy': 0})
 	call dein#load_toml($TOML_LAZY, {'lazy': 1})
 
-	call dein#add('Shougo/deoplete.nvim')
-	if !has('nvim')
-		call dein#add('roxma/nvim-yarp')
-		call dein#add('roxma/vim-hug-neovim-rpc')
-	endif
-	"call dein#add('Shougo/neco-vim')
-	"call dein#add('Shougo/neco-syntax')
-	"call dein#add('ujihisa/neco-look')
-
-	"call dein#add('Shougo/neocomplete')
-	"call dein#add('Shougo/neosnippet')
-	"call dein#add('Shougo/neosnippet-snippets')
-	"call dein#add('nathanaelkane/vim-indent-guides')
-	call dein#add('vim-airline/vim-airline')
-	call dein#add('vim-airline/vim-airline-themes')
-	"call dein#add('w0ng/vim-hybrid')
-	call dein#add('nanotech/jellybeans.vim')
-	"call dein#add('scrooloose/nerdcommenter')
-	"call dein#add('vim-syntastic/syntastic.git')
-	call dein#add('majutsushi/tagbar')
-	call dein#add('airblade/vim-gitgutter')
-	"call dein#add('honza/vim-snippets')
-	"call dein#add('terryma/vim-multiple-cursors')
-	call dein#add('tpope/vim-fugitive')
-	call dein#add('zebult/auto-gtags.vim')
-	call dein#add('justinmk/vim-dirvish')
-
 	call dein#end()
 	call dein#save_state()
 endif
@@ -89,14 +62,6 @@ set hlsearch
 nnoremap <ESC><ESC> :noh<CR>
 
 "----------------------------------------------------------------
-" deoplete
-"----------------------------------------------------------------
-let g:deoplete#enable_at_startup = 1
-
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-"----------------------------------------------------------------
 " 全角スペースの表示
 "----------------------------------------------------------------
 function! ZenkakuSpace()        
@@ -113,26 +78,11 @@ if has('syntax')
 endif
 
 "----------------------------------------------------------------
-" vim-airline
-"----------------------------------------------------------------
-set t_Co=256
-set laststatus=2
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#branch#enabled = 1
-let b:airline_whitespace_disabled = 1
-
-"----------------------------------------------------------------
-" hybrid
-"----------------------------------------------------------------
-"set background=dark
-"colorscheme hybrid
-
-"----------------------------------------------------------------
 " jellybeans
 "----------------------------------------------------------------
 set background=dark
 colorscheme jellybeans
+syntax on
 
 "----------------------------------------------------------------
 " gtags
@@ -158,41 +108,8 @@ endif
 "augroup END
 
 "----------------------------------------------------------------
-" tagbar
-"----------------------------------------------------------------
-nmap <F8> :TagbarToggle<CR>
-
-"----------------------------------------------------------------
-" auto-gtags.vim
-"----------------------------------------------------------------
-let g:auto_gtags = 1
-
-"----------------------------------------------------------------
 " vim-indent-guides
 "----------------------------------------------------------------
 "let g:indent_guides_enable_on_vim_startup = 1
 "let g:indent_guides_guides_size = 1
 "let g:indent_guides_start_level = 2
-
-"----------------------------------------------------------------
-" neosnippet
-"----------------------------------------------------------------
-" Plugin key-mappings.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-"imap <expr><TAB>
-" \ pumvisible() ? "\<C-n>" :
-" \ neosnippet#expandable_or_jumpable() ?
-" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-			\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-" For conceal markers.
-if has('conceal')
-	set conceallevel=2 concealcursor=niv
-endif
