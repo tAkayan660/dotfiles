@@ -32,14 +32,12 @@ sudo pip3 install -U pip3
 ## Add path
 export XDG_CONFIG_HOME="~/.config"
 export XDG_CACHE_HOME="~/.cache"
-mkdir -p ${XDG_CONFIG_HOME}/nvim
+mkdir -p ${XDG_CONFIG_HOME}
 mkdir -p ${XDG_CACHE_HOME}
-ln -s ~/.vim ${XDG_CONFIG_HOME}/nvim/
-ln -s ~/.vimrc ${XDG_CONFIG_HOME}/init.vim
 ## Add dein
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-sh ./install.sh ${XDG_CACHE_HOME}/dein
-rm ./install.sh
+sh ./installer.sh ${XDG_CACHE_HOME}/dein
+rm ./installer.sh
 ## Symbolic link
 ln -s ${DOTFILES_DIR}/nvim ${XDG_CONFIG_HOME}
 
@@ -89,6 +87,7 @@ ln -s ${DOTFILES_DIR}/tmux.conf ~/.tmux.conf
 #ln -s ${DOTFILES_DIR}/tmux.conf ~/.sshrc.d/tmux.conf
 
 # Sh selection
+echo $SHELL
 if [ ! $SHELL = "/bin/zsh" ]; then
     read -p "Would you like to set the default sh to 'zsh'? [Y/n]: " ZSH_DEF
 
