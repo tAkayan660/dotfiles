@@ -30,7 +30,11 @@ repo = 'justinmk/vim-dirvish'
 repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
+repo = 'nanotech/jellybeans.vim'
+
+[[plugins]]
 repo = 'vim-airline/vim-airline'
+depends = ['vim-airline-themes']
 hook_source = '''
 	set t_Co=256
 	set laststatus=2
@@ -39,14 +43,6 @@ hook_source = '''
 	let g:airline#extensions#branch#enabled = 1
 	let b:airline_whitespace_disabled = 1
 '''
-depends = ['vim-airline-themes']
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
-
-[[plugins]]
-repo = 'nanotech/jellybeans.vim'
-hook_source = '''
-	set background=dark
-	colorscheme jellybeans
-'''

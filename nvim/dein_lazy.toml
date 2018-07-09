@@ -33,7 +33,3 @@ hook_source = '''
 	let g:auto_gtags = 1
 '''
 on_i = 1
-
-[[plugins]]
-repo = 'justinmk/vim-dirvish'
-on_i = 1
