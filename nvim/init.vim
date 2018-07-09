@@ -12,55 +12,55 @@ let $TOML		= expand('$DEIN_CONFIG_DIR/dein.toml')
 let $TOML_LAZY	= expand('$DEIN_CONFIG_DIR/dein_lazy.toml')
 
 if &compatible
-    set nocompatible
+	set nocompatible
 endif
 
 set runtimepath^=$DEIN_REPOS_DIR
 
 if dein#load_state($DEIN_CACHE_DIR)
-    call dein#begin($DEIN_CACHE_DIR)
+	call dein#begin($DEIN_CACHE_DIR)
 
-    call dein#add($DEIN_REPOS_DIR)
+	call dein#add($DEIN_REPOS_DIR)
 
-    call dein#load_toml($TOML,      {'lazy': 0})
-    call dein#load_toml($TOML_LAZY, {'lazy': 1})
+	call dein#load_toml($TOML,      {'lazy': 0})
+	call dein#load_toml($TOML_LAZY, {'lazy': 1})
 
-    call dein#add('Shougo/deoplete.nvim')
-    if !has('nvim')
-        call dein#add('roxma/nvim-yarp')
-        call dein#add('roxma/vim-hug-neovim-rpc')
-    endif
+	call dein#add('Shougo/deoplete.nvim')
+	if !has('nvim')
+		call dein#add('roxma/nvim-yarp')
+		call dein#add('roxma/vim-hug-neovim-rpc')
+	endif
 	call dein#add('Shougo/neco-vim')
 	call dein#add('Shougo/neco-syntax')
 	call dein#add('ujihisa/neco-look')
 
-    "call dein#add('Shougo/neocomplete')
-    call dein#add('Shougo/neosnippet')
-    call dein#add('Shougo/neosnippet-snippets')
-    "call dein#add('nathanaelkane/vim-indent-guides')
-    call dein#add('vim-airline/vim-airline')
-    call dein#add('vim-airline/vim-airline-themes')
-    "call dein#add('w0ng/vim-hybrid')
-    call dein#add('nanotech/jellybeans.vim')
-    "call dein#add('scrooloose/nerdcommenter')
-    "call dein#add('vim-syntastic/syntastic.git')
-    call dein#add('majutsushi/tagbar')
-    call dein#add('airblade/vim-gitgutter')
-    "call dein#add('honza/vim-snippets')
-    "call dein#add('terryma/vim-multiple-cursors')
-    call dein#add('tpope/vim-fugitive')
+	"call dein#add('Shougo/neocomplete')
+	call dein#add('Shougo/neosnippet')
+	call dein#add('Shougo/neosnippet-snippets')
+	"call dein#add('nathanaelkane/vim-indent-guides')
+	call dein#add('vim-airline/vim-airline')
+	call dein#add('vim-airline/vim-airline-themes')
+	"call dein#add('w0ng/vim-hybrid')
+	call dein#add('nanotech/jellybeans.vim')
+	"call dein#add('scrooloose/nerdcommenter')
+	"call dein#add('vim-syntastic/syntastic.git')
+	call dein#add('majutsushi/tagbar')
+	call dein#add('airblade/vim-gitgutter')
+	"call dein#add('honza/vim-snippets')
+	"call dein#add('terryma/vim-multiple-cursors')
+	call dein#add('tpope/vim-fugitive')
 	call dein#add('zebult/auto-gtags.vim')
-    call dein#add('justinmk/vim-dirvish')
+	call dein#add('justinmk/vim-dirvish')
 
-    call dein#end()
-    call dein#save_state()
+	call dein#end()
+	call dein#save_state()
 endif
 
 filetype plugin indent on
 syntax enable
 
 if dein#check_install()
-    call dein#install()
+	call dein#install()
 endif
 
 "----------------------------------------------------------------
@@ -100,16 +100,16 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " 全角スペースの表示
 "----------------------------------------------------------------
 function! ZenkakuSpace()        
-    highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray 
+	highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray 
 endfunction
 
 if has('syntax')
-    augroup ZenkakuSpace
-        autocmd!
-        autocmd ColorScheme * call ZenkakuSpace()
-        autocmd VimEnter,WinEnter,BufRead * let w:m1=matchadd('ZenkakuSpace', '　')
-    augroup END
-    call ZenkakuSpace()
+	augroup ZenkakuSpace
+		autocmd!
+		autocmd ColorScheme * call ZenkakuSpace()
+		autocmd VimEnter,WinEnter,BufRead * let w:m1=matchadd('ZenkakuSpace', '　')
+	augroup END
+	call ZenkakuSpace()
 endif
 
 "----------------------------------------------------------------
@@ -145,7 +145,7 @@ map <C-p> :cp<CR>
 
 " tagFileの指定
 if has('path_extra')
-    set tags+=tags;/home/$HOME
+	set tags+=tags;/home/$HOME
 endif
 
 "----------------------------------------------------------------
@@ -190,9 +190,9 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 " \ neosnippet#expandable_or_jumpable() ?
 " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-            \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+			\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " For conceal markers.
 if has('conceal')
-    set conceallevel=2 concealcursor=niv
+	set conceallevel=2 concealcursor=niv
 endif
