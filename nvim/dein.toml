@@ -10,7 +10,7 @@ build = 'make'
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_source = '''
-    let g:deoplete#enable_at_startup = 1
+	let g:deoplete#enable_at_startup = 1
 	inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 '''
 
