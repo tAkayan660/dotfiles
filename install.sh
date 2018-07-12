@@ -29,6 +29,11 @@ sudo apt-get install neovim
 ## python3
 sudo apt-get install python3-dev python3-pip
 sudo pip3 install -U pip3
+sudo pip3 install neovim
+## python2
+sudo apt-get install python-dev python-pip
+sudo pip install -U pip
+sudo pip2 install neovim
 ## Add path
 export XDG_CONFIG_HOME="~/.config"
 export XDG_CACHE_HOME="~/.cache"
