@@ -80,6 +80,10 @@ ln -s ${DOTFILES_DIR}/powerline-shell.json ~/.powerline-shell.json
 ## Symbolic link
 ln -s ${DOTFILES_DIR}/tmux.conf ~/.tmux.conf
 
+# latexmk
+sudo apt install latexmk texlive-lang-japanese
+ln -s ${DOTFILES_DIR}/latexmkrc ~/.latexmkrc
+
 # sshrc
 #wget https://raw.githubusercontent.com/Russell91/sshrc/master/sshrc
 #chmod +x sshrc

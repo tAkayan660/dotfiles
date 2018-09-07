@@ -36,7 +36,6 @@ source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 #fi
 
 # aliases
-alias sudo="sudo -E "
 alias vi="nvim"
 alias vnc="vncviewer"
 alias matlab="matlab -softwareopengl"
