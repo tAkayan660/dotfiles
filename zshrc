@@ -77,8 +77,15 @@ fi
 export XDG_CONFIG_HOME="~/.config"
 export XDG_CACHE_HOME="~/.cache"
 
+# ROS kinetic
+if [ -f /opt/ros/kinetic/setup.zsh ]; then
+    source /opt/ros/kinetic/setup.zsh
+fi
+
 # Vivado
-source /opt/Xilinx/Vivado/2018.2/settings64.sh
+if [ -d /opt/Xilinx/ ]; then
+	source /opt/Xilinx/Vivado/2018.2/settings64.sh
+fi
 
 # time
 if (which zprof > /dev/null) ;then
@@ -88,9 +95,4 @@ fi
 # compile
 if [ $DOTFILES/.zshrc -nt ~/.zshrc.zwc ]; then
     zcompile ~/.zshrc
-fi
-
-# ROS kinetic
-if [ -f /opt/ros/kinetic/setup.zsh ]; then
-    source /opt/ros/kinetic/setup.zsh
 fi
