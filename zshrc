@@ -77,6 +77,9 @@ fi
 export XDG_CONFIG_HOME="~/.config"
 export XDG_CACHE_HOME="~/.cache"
 
+# Vivado
+source /opt/Xilinx/Vivado/2018.2/settings64.sh
+
 # time
 if (which zprof > /dev/null) ;then
     zprof | less
