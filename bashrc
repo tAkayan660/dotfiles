@@ -113,11 +113,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias sudo="sudo -E "
 alias semacs="\emacs --daemon"
 alias emacs="emacsclient -nw"
 alias kemacs='emacsclient -e "(kill-emacs)"'
-alias vi="vim"
+alias vi="nvim"
 alias vnc="vncviewer"
 alias matlab="matlab -softwareopengl"
 alias scilab="~/scilab*/bin/scilab -l en_US"
@@ -172,11 +171,18 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # ROS kinetic
-source /opt/ros/kinetic/setup.bash
+if [ -f /opt/ros/kinetic/setup.bash ]; then
+	source /opt/ros/kinetic/setup.bash
+fi
+
+# Vivado
+if [ -d /opt/Xilinx/Vivado/2018.2 ] && [[ $USERNAME = "root" ]]; then
+	source /opt/Xilinx/Vivado/2018.2/settings64.sh
+fi
 
 # CUDA
 export PATH=/usr/local/cuda/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_ PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export CUDA_PATH=/usr/local/cuda
 
 # Neovim

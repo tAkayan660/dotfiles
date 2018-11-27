@@ -82,10 +82,13 @@ if [ -f /opt/ros/kinetic/setup.zsh ]; then
     source /opt/ros/kinetic/setup.zsh
 fi
 
-# Vivado
-if [ -d /opt/Xilinx/ ]; then
-	source /opt/Xilinx/Vivado/2018.2/settings64.sh
-fi
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Anaconda
+export PATH="$PYENV_ROOT/versions/anaconda3-5.3.0/bin:$PATH"
 
 # time
 if (which zprof > /dev/null) ;then

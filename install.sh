@@ -6,7 +6,7 @@ DOTFILES_DIR=$(cd $(dirname $0) && pwd)/dotfiles
 
 # Package install
 sudo apt-get -q update
-sudo apt-get -y git vim bash zsh python3-pip
+sudo apt-get install -y git vim bash zsh python3-pip
 
 # dotfiles
 git clone https://github.com/tAkayan660/dotfiles.git
@@ -22,16 +22,16 @@ git clone https://github.com/tAkayan660/dotfiles.git
 #mkdir -p ~/.vim/backups
 #mkdir -p ~/.vim/tmp
 ## add neovim
-sudo apt-get install software-properties-common
+sudo apt-get install -y software-properties-common
 sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-get update
-sudo apt-get install neovim
+sudo apt-get install -y neovim
 ## python3
-sudo apt-get install python3-dev python3-pip
+sudo apt-get install -y python3-dev python3-pip
 sudo pip3 install -U pip3
 sudo pip3 install neovim
 ## python2
-sudo apt-get install python-dev python-pip
+sudo apt-get install -y python-dev python-pip
 sudo pip install -U pip
 sudo pip2 install neovim
 ## Add path
@@ -40,6 +40,7 @@ export XDG_CACHE_HOME="~/.cache"
 mkdir -p ${XDG_CONFIG_HOME}
 mkdir -p ${XDG_CACHE_HOME}
 ## Add dein
+mkdir $XDG_CACHE_HOME/dein
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 sh ./installer.sh ${XDG_CACHE_HOME}/dein
 rm ./installer.sh
@@ -81,7 +82,7 @@ ln -s ${DOTFILES_DIR}/powerline-shell.json ~/.powerline-shell.json
 ln -s ${DOTFILES_DIR}/tmux.conf ~/.tmux.conf
 
 # latexmk
-sudo apt install latexmk texlive-lang-japanese
+sudo apt install -y latexmk texlive-lang-japanese
 ln -s ${DOTFILES_DIR}/latexmkrc ~/.latexmkrc
 
 # sshrc
