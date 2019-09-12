@@ -6,10 +6,10 @@ DOTFILES_DIR=$(cd $(dirname $0) && pwd)/dotfiles
 
 # Package install
 sudo apt-get -q update
-sudo apt-get -y git vim bash zsh python3-pip
+sudo apt-get -y install git vim bash zsh
 
 # dotfiles
-git clone https://github.com/tAkayan660/dotfiles.git
+git clone https://github.com/takayan660/dotfiles.git
 
 # emacs
 #cd ${DOTFILES_DIR}/emacs.d/public_repos/
@@ -32,7 +32,7 @@ sudo pip3 install -U pip3
 sudo pip3 install neovim
 ## python2
 sudo apt-get install python-dev python-pip
-sudo pip install -U pip
+sudo pip2 install -U pip2
 sudo pip2 install neovim
 ## Add path
 export XDG_CONFIG_HOME="~/.config"
