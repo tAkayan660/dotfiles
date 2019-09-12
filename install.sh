@@ -22,17 +22,17 @@ git clone https://github.com/takayan660/dotfiles.git
 #mkdir -p ~/.vim/backups
 #mkdir -p ~/.vim/tmp
 ## add neovim
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository -y ppa:neovim-ppa/unstable
 sudo apt-get update
-sudo apt-get install neovim
+sudo apt-get install -y neovim
 ## python3
-sudo apt-get install python3-dev python3-pip
+sudo apt-get install -y python3-dev python3-pip
 sudo pip3 install -U pip3
 sudo pip3 install neovim
 ## python2
-sudo apt-get install python-dev python-pip
-sudo pip2 install -U pip2
+sudo apt-get install -y python-dev python-pip
+sudo pip install -U pip
 sudo pip2 install neovim
 ## Add path
 export XDG_CONFIG_HOME="~/.config"
@@ -47,6 +47,7 @@ rm ./installer.sh
 ln -s ${DOTFILES_DIR}/nvim ${XDG_CONFIG_HOME}
 
 # bash
+rm ~/.bashrc
 ln -s ${DOTFILES_DIR}/bashrc ~/.bashrc
 
 # zsh
@@ -61,6 +62,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search.git ~/.zsh/z
 cd ~/.zsh/fzf
 yes | ./install
 ## Symbolic link
+rm ~/.zshrc
 ln -s ${DOTFILES_DIR}/zshrc ~/.zshrc
 ln -s ${DOTFILES_DIR}/zshenv ~/.zshenv
 ln -s ${DOTFILES_DIR}/zpreztorc ~/.zpreztorc
